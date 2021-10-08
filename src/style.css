@@ -20,7 +20,7 @@ body, html {
   font-family: Roboto;
 }
 
-.BoxNavs:hover {
+.BoxNavs:hover { /* Lo que cambiará cuando pase el cursor*/
   background-color: #777;
   font-family: Roboto;
 }
@@ -82,30 +82,30 @@ body, html {
 }
 .BoxValidarTarjeta{
   width: 90%;
-  max-width: 1000px;
+  max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
   padding: 40px20px;
-  margin: auto;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto; /* Para entrar la página de forma horizontal*/
+  display:flex; /* Para trabajar con Flexbox para también usarlos en los elementos que contenga y moverlos*/
+  flex-direction: column; /* Para que el elemento se ponga en columna, de lo contrario permaneceria como fila*/
+  align-items: center; /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal*/
 }
 
 /*ESTILO DE LA TARJETA*/
 
 .Tarjeta{
-  width: 100%;
-  max-width: 550px;
-  position:relative;
+  width: 100%; 
+  max-width: 550px; /* Para que no sea demasiado grande y estaria al mismo nivel que el box normal*/
+  position:relative; /* Al elemento padre le ponemos position relative y luego al elemento hijo le ponemos position absolute para que no aparezca debajo*/
   color: white;
-  transition: .4s ease all;
-  transition: rotateY(0deg);
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  cursor: pointer;
-  z-index: 2;
+  transition: .4s ease all; /* tiempo y función*/
+  transform: rotateY(0deg); /* para valor a la rotación y le ponemos 0 grados para que se quede fija en el eje */
+  transform-style: preserve-3d; /*3d para agregarle el efecto de giro 3d */
+  backface-visibility: hidden; /* nos permite que la parte de atras de la tarjeta este oculta cuando se gire*/
+  cursor: pointer;/* para que suceda cuando se pase el cursero*/
+  z-index: 2; /* nos permite establecer qué capa se muestre. 1:formulario  2:tarjeta 3:botón*/
   background: black;
 }
 
 .Tarjeta:hover {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Para que cuando pase el cursor gire 180 grados*/
 }
