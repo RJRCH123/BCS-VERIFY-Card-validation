@@ -25,6 +25,7 @@ body, html {
   font-family: Roboto;
 }
 
+
 /* Diseñe el contenido de la pestaña (y agregue altura: 100% para el contenido de la página completa) */
 .Box {
   color: rgb(0, 0, 0);
@@ -39,6 +40,16 @@ body, html {
 #BloquearTarjeta {background-color: rgb(255, 255, 255);}
 #Contactanos {background-color: rgb(255, 255, 255);}
 
+/*Logos*/
+.LogoGifContac {
+    width: 200px;
+}
+.LogoRecBlanco{
+  width: 200px;
+}
+.LogoCuadrado{
+  width: 200px;
+}
 
 /* PIE DE PAGINA */
 .footer {
