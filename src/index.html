@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>BCS Verify®</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon/favicon.ico">
   </head>
   <body>
@@ -30,16 +30,16 @@
         
         <h3>¿Cómo validar tu tarjeta?</h3>
         <p>A continuación llena los datos correspondientes para confirmar si tu tarjeta esta vigente aún. Si aparece como inválida, significa que ya está bloqueada.</p><hr>
-        <img class="LogoRecBlanco" src="./img/Logos/LogoRecBlanco.jpg" alt="BCS Verify®">
+        <img src="./img/Logos/LogoRecBlanco.jpg" class="LogoRecBlanco" alt="BCS Verify®">
       </div>
 
       <div class="BoxValidarTarjeta">
-        <section class="Tarjeta" id="Tarjeta">
+        <section class="Tarjeta active" id="Tarjeta">
           <div class="Delantera">
             <div class="Tipo-logo">
               <img src="./img/Tarjeta/Visa.png" alt="Visa">
             </div>
-            <img src="./img/Tarjeta/chip-tarjeta.png" alt="Chip">
+            <img src="./img/Tarjeta/chip-tarjeta.png" class="Chip" alt="Chip">
             <div class="Datos">
               <div class="grupo" id="Numero">
                 <p class="label">Número Trajeta</p>
@@ -59,6 +59,22 @@
               </div>
             </div>
           </div>
+
+          <div class="Reversa">
+            <div class="Barra"></div>
+            <div class="Datos">
+              <div class="grupo" id="Firma">
+                <p class="label">Firma</p>
+                <div class="firma"><p>Mario Diaz</p></div>
+              </div>
+              <div class="grupo" id="CCV">
+                <p class="label">ccv</p>
+                <p class="ccv"></p>
+              </div>
+            </div>
+            <p class="leyenda"> En esta parte se ingresará texto que aun no ha sido definido.</p>
+            <a href="#" class="link-banco">www.tubanco.com</a>
+          </div>
         </section>    
       </div>
     </main>
@@ -68,7 +84,7 @@
           
           <h3>¿Cómo bloquear tu tarjeta?</h3>
           <p>Si tienes problemas con tu tarjeta o has sufrido cualquier robo o estafa, podrás proceder a bloquear tu tarjeta llenando tus datos y a un solo clic.</p><hr>
-          <img class="LogoRecBlanco" src="./img/Logos/LogoRecBlanco.jpg" alt="BCS Verify®">
+          <img src="./img/Logos/LogoRecBlanco.jpg" class="LogoRecBlanco" alt="BCS Verify®">
       </div>
       </main>
       
@@ -77,7 +93,7 @@
           
           <h3>¿Cómo contactarnos?</h3>
           <p>Para cualquier información puedrás comunicarte con nosotros a traves de la linea telefonica gratuita y en nuestras redes sociales. Atendemos las 24h al dia los 365 dias del año.</p><hr>
-          <img class="LogoGifContac" src="./img/Logos/LogoGifContac.gif" alt="BCS Verify®">
+          <img src="./img/Logos/LogoGifContac.gif" class="LogoGifContac" alt="BCS Verify®">
         <div id="BoxIntro"></div>
       </main>
 
@@ -85,10 +101,10 @@
     <footer class="footer">
       El contenido de esta página web es con fines educativos personales. La idea del proyecto "CCS Verify®" no existe. <br> Lima - Perú | 2021 <br> 
 
-      <a href="https://github.com/RJRCH123"><img class="redSocial" src="./img/Redes sociales/icons8-github-30.png" href="https://github.com/RJRCH123" alt="Mi Github"></a> 
-      <a href="mailto:rous9716@gmail.com"><img class="redSocial" src="./img/Redes sociales/icons8-gmail-32.png" alt="Mi Gmail"></a> 
-      <a href="https://twitter.com/rouseblues"><img class="redSocial" src="./img/Redes sociales/icons8-twitter-30.png" alt="Mi Twitter"></a> 
-      <a href="https://www.linkedin.com/in/rosamaria-rodriguez-6904a1191/"><img class="redSocial" src="./img/Redes sociales/icons8-linkedin-30.png" alt="Mi LinkenIn"></a> 
+      <a href="https://github.com/RJRCH123"><img src="./img/Redes sociales/icons8-github-30.png" href="https://github.com/RJRCH123" class="redSocial" alt="Mi Github"></a> 
+      <a href="mailto:rous9716@gmail.com"><img src="./img/Redes sociales/icons8-gmail-32.png" class="redSocial" alt="Mi Gmail"></a> 
+      <a href="https://twitter.com/rouseblues"><img src="./img/Redes sociales/icons8-twitter-30.png" class="redSocial" alt="Mi Twitter"></a> 
+      <a href="https://www.linkedin.com/in/rosamaria-rodriguez-6904a1191/"><img src="./img/Redes sociales/icons8-linkedin-30.png" class="redSocial" alt="Mi LinkenIn"></a> 
 
     </footer>
     <script>
