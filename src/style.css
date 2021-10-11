@@ -50,7 +50,7 @@ body, html {
   width: 200px;
 }
 .LogoCuadrado {
-  width: 200px;
+  width: 300px;
 }
 
 /* PIE DE PAGINA */
@@ -85,7 +85,7 @@ body, html {
 .BoxValidarTarjeta{
   width: 90%;
   max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
-  padding: 40px20px;
+  padding: 40px 20px;
   margin: auto; /* Para entrar la página de forma horizontal*/
   display:flex; /* Para trabajar con Flexbox para también usarlos en los elementos que contenga y moverlos*/
   flex-direction: column; /* Para que el elemento se ponga en columna, de lo contrario permaneceria como fila*/
@@ -110,11 +110,11 @@ body, html {
 
 /* .Tarjeta:hover {
   transform: rotateY(180deg);  
-} Para que cuando pase el cursor gire 180 grados pero para que gire cuando demos clic se debe agregar una funcion*/
+} Para que cuando pase el cursor gire 180 grados pero para que gire cuando demos clic se debe agregar una funcion */
 
 .Tarjeta.active { /* Al dar clic girara 180 grados por la funcion active*/
   transform: rotateY(180deg);
-}
+} 
 
 
 .Tarjeta > div {
@@ -148,12 +148,12 @@ body, html {
 
 .Delantera .Chip {
   width: 100%;
-  max-width: 50px;
+  max-width: 60px;
   margin-bottom: 20px;
 }
 
 .Delantera .grupo .label {
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   margin-bottom: 5px;
 }
@@ -162,7 +162,7 @@ body, html {
 .Delantera .grupo .nombre,
 .Delantera .grupo .expiracion {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase; /*Asegura que esten en mayusculas*/
 }
 
@@ -177,17 +177,17 @@ body, html {
 .Reversa {
   background: url(./img/Tarjeta/Fondo.jpg);
   background-size: cover;
-  position: absolute;
+  position: absolute; /* mas el top de 0 se podrá esconder bajo la tarjeta delantera*/
   top: 0;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
+  transform: rotateY(180deg); /* Para que aparezca modo espejo*/
+  backface-visibility: hidden; /* Ocultar la parte de atrás*/
 }
 
 .Reversa .Barra {
   height: 40px;
   background: black;
   width: 100%;
-  position: absolute;
+  position: absolute; 
   top: 30px;
   left: 0;
 }
@@ -198,7 +198,7 @@ body, html {
   justify-content: space-between;
 }
 
-.Reversa .Datos {
+.Reversa .Datos p {
   margin-bottom: 5px;
 }
 
@@ -206,12 +206,12 @@ body, html {
   width: 70%;
 }
 
-.Reversa .Datos #firma .firma {
+.Reversa .Datos #Firma .firma {
   height: 40px;
-  background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 5px );
+  background: repeating-linear-gradient(skyblue 0px, skyblue 4px, orange 4px, orange 8px );
 }
 
-.Reversa .Datos #firma .firma p {
+.Reversa .Datos #Firma .firma p {
   line-height: 40px;
   font-family: 'Liu Jian Mao Cao', cursive;
   color: black;
@@ -219,3 +219,27 @@ body, html {
   padding: 0 10px;
   text-transform: capitalize;
 }
+
+.Reversa .Datos #CCV {
+  width: 20%;
+}
+
+.Reversa .Datos #CCV .ccv {
+  background: white;
+  border-radius: 5px;
+  height: 40px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.Reversa .leyenda {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.Reversa .link-banco {
+  font-size: 14px;
+  color: white;
+}
+
