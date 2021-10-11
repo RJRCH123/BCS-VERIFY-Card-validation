@@ -2,9 +2,16 @@
 
 // console.log(validator);
 
-// Función para que al dar click te permita girar a la parte reversa
-const Tarjeta = document.querySelector('#Tarjeta');
+// Función para girar al dar click 
+const   Tarjeta = document.querySelector('#Tarjeta'),
+        abrirFormulario = document.querySelector('#AbrirFormulario'),
+        formulario = document.querySelector('#Formulario');
 
 Tarjeta.addEventListener('click', () => {
     Tarjeta.classList.toggle('active');
+});
+
+abrirFormulario.addEventListener('click', () => {
+    abrirFormulario.classList.toggle('active');
+    formulario.classList.toggle('active');
 });

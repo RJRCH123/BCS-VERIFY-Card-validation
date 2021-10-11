@@ -64,7 +64,7 @@
 
                 <div class="grupo" id="Expiracion">
                   <p class="label">Expiración</p>
-                  <p class="expiracion"><span class="mes">MM</span> / <span class="ano">AA</span></p>
+                  <p class="expiracion"><span class="mes">MM</span> / <span class="anio">AA</span></p>
                 </div>
               </div>
             </div>
@@ -93,10 +93,51 @@
 
         <!-- Botón para abrir y cerrar el Formulario -->
         <div class="BoxBoton">
-          <button class="abrirFormulario" id="AbrirFormulario"><i class="fa-duotone fa-circle-plus"></i></button>
+          <button class="abrirFormulario" id="AbrirFormulario">
+          +
+          </button>
         </div>
         
         <!-- Formulario -->
+        <form action="" id="Formulario" class="formulario">
+
+          <div class="grupo">
+            <label for="InputNumero">Número de Tarjeta</label>
+            <input type="text" id="InputNumero" maxlength="19" autocomplete="off">
+          </div>
+
+          <div class="grupo">
+            <label for="InputNombre">Nombre y Apellido</label>
+            <input type="text" id="InputNombre" maxlength="19" autocomplete="off">
+          </div>
+
+          <!-- Formulario -->
+          <div class="flexbox">
+            <div class="grupoExpira">
+              <label for="SelecionarMes">Expiración</label>
+              <div class="flexbox">
+                <!-- Grupo Input Expiración -->
+                <div class="grupoSeleccionable">
+                  <select name="mes" id="SelecionarMes">
+                    <option disabled selected>Mes</option>
+                  </select>
+                </div>
+                <div class="grupoSeleccionable">
+                  <select name="Anio" id="SelecionarAnio">
+                    <option disabled selected>Año</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- CVV -->
+            <div class="grupoCVV">
+              <label for="InputCVV">CVV</label>
+              <input type="text" id="InputCVV" maxlength="3">
+            </div>
+          </div>
+          <!-- Botón Verificar Validación -->
+          <button type="submit" class="verificar">Verificar</button>
+        </form>
       </div>
     </main>
       <!-- Página para el Bloqueo de Tarjeta --> 

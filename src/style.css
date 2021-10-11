@@ -1,3 +1,5 @@
+
+/* Importación de estilos a letras */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap');
@@ -27,6 +29,17 @@ body, html {
   font-family: Roboto;
 }
 
+/* LOGOS */
+.LogoGifContac {
+  width: 200px;
+}
+.LogoRecBlanco {
+  width: 200px;
+}
+.LogoCuadrado {
+  width: 500px;
+}
+
         /* PÁGINAS */
 
 /* Diseñe el contenido de la pestaña (y agregue altura: 100% para el contenido de la página completa) */
@@ -42,18 +55,6 @@ body, html {
 #ValidarTarjeta {background-color: rgb(255, 255, 255);}
 #BloquearTarjeta {background-color: rgb(255, 255, 255);}
 #Contactanos {background-color: rgb(255, 255, 255);}
-
-        /* LOGOS */
-
-.LogoGifContac {
-  width: 200px;
-}
-.LogoRecBlanco {
-  width: 200px;
-}
-.LogoCuadrado {
-  width: 500px;
-}
 
         /* MAIN: INICIO */
 
@@ -75,10 +76,13 @@ body, html {
   width: 80%;
   max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
   padding: 30px 10px;
-  margin: auto; /* Para entrar la página de forma horizontal*/
-  display: flex; /* Para trabajar con Flexbox para también usarlos en los elementos que contenga y moverlos*/
-  flex-direction: column; /* Para que el elemento se ponga en columna, de lo contrario permaneceria como fila*/
-  align-items: center; /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal*/
+  margin-left: 150px;
+  display: flex; 
+  /* flex-direction: column; */
+  justify-content: space-between; 
+  /* align-items: center;  */
+  /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal */
+  
 }
 
 /*LA TARJETA*/
@@ -120,6 +124,8 @@ body, html {
   width: 100%;
   background: url(./img/Tarjeta/Fondo.jpg);
   background-size: cover; /* Para que la imagen se adapte y no se corte*/
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .Delantera .Tipo-logo {
@@ -236,6 +242,122 @@ body, html {
   font-size: 12px;
   color: white;
 }
+
+/* BOTÓN ABRIR FORMULARIO*/
+
+.BoxBoton .abrirFormulario {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  line-height: 20px;
+  background: gray;
+  color: white;
+  position: relative;
+  left: 100px;
+  top: 130px;
+  z-index: 3;
+  border-radius: 100%;
+  box-shadow: -5px 4px 8px rgb(10 40 65);
+  padding: 5px;
+  transition: all .3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.BoxBoton .abrirFormulario:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+.BoxBoton .abrirFormulario.active {
+  transform: rotate(45deg)
+} 
+
+/* FORMULARIO DE LA TARJETA*/
+.formulario {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 700px;
+  padding: 30px 30px 30px 150px;
+  border-radius: 15px;
+  position: relative;
+  left: 20px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .4s ease-out;
+}
+
+.formulario.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario label {
+  display: block;
+  color: rgb(95, 95, 95);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario select,
+.verificar {
+  border: 2px solid rgb(168, 223, 245);
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  padding: 5px 8px;
+  transition: .2s ease all;
+  border-radius: 8px;
+}
+
+.formulario input:hover,
+.formulario select:hover {
+  border: 3px solid rgba(90, 116, 148, 0.3);
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: black;
+  box-shadow: 2px 8px 12px -6px rgba(89, 142, 206, 0.3);
+}
+
+.formulario input {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.formulario .flexbox {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 15px;
+}
+
+.formulario .grupoExpira {
+  width: 100%;
+}
+
+.formulario .grupoCCV {
+  min-width: 100px;
+}
+
+.formulario select {
+  -webkit-appearance: none
+}
+
+
+.formulario .verificar {
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  color: white;
+  background: rgb(10 40 65) ;
+  box-shadow: 2px 2px 10px 0px rgba(90, 116, 148, 0.3);
+  cursor: pointer;
+}
+
+.formulario .verificar:hover {
+  background: rgb(59, 59, 59);
+}
+
 
         /* MAIN: BLOQUEAR TARJETA */
 
