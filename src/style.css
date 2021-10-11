@@ -123,6 +123,7 @@ body, html {
 .Tarjeta .Delantera{
   width: 100%;
   background: url(./img/Tarjeta/Fondo.jpg);
+  box-shadow: 10px 13px 12px 2px #333333ba;
   background-size: cover; /* Para que la imagen se adapte y no se corte*/
   padding-top: 10px;
   padding-bottom: 10px;
@@ -168,8 +169,9 @@ body, html {
 
 /* TARJETA: REVERSA */
 
-.Reversa {
+.Tarjeta .Reversa {
   background: url(./img/Tarjeta/Fondo.jpg);
+  box-shadow: 10px 13px 12px 2px #333333ba;
   background-size: cover;
   position: absolute; /* mas el top de 0 se podrá esconder bajo la tarjeta delantera*/
   top: 0;
@@ -358,6 +360,10 @@ body, html {
   background: rgb(59, 59, 59);
 }
 
+button.verificar {
+  width: 174px;
+  height: 39px;
+}
 
         /* MAIN: BLOQUEAR TARJETA */
 
