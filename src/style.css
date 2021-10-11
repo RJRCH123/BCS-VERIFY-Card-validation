@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-@import url(https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap);
+@import url('https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap');
 
 /* Establezca la altura del cuerpo y del documento al 100% para habilitar las "pestañas de página completa". */
 body, html {
@@ -8,7 +8,7 @@ body, html {
   margin: 0;
 }
 
-/* Establezca estilos para la barra de navegación */
+        /* BARRA DE NAVEGACIÓN */
 .BoxNavs {
   background-color: #555;
   color: white;
@@ -27,6 +27,7 @@ body, html {
   font-family: Roboto;
 }
 
+        /* PÁGINAS */
 
 /* Diseñe el contenido de la pestaña (y agregue altura: 100% para el contenido de la página completa) */
 .Box {
@@ -42,18 +43,207 @@ body, html {
 #BloquearTarjeta {background-color: rgb(255, 255, 255);}
 #Contactanos {background-color: rgb(255, 255, 255);}
 
-/*Logos*/
+        /* LOGOS */
+
 .LogoGifContac {
-    width: 200px;
+  width: 200px;
 }
 .LogoRecBlanco {
   width: 200px;
 }
 .LogoCuadrado {
-  width: 300px;
+  width: 500px;
 }
 
-/* PIE DE PAGINA */
+        /* MAIN: INICIO */
+
+        /* MAIN: VALIDAR TARJETA */
+
+/* PAGINA TOTAL DE VALIDAR TARJETA */
+
+.ValidarTarjeta{
+  height: 100%;
+  background: white;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CONTENEDOR TARJETA + FORMULARIO + BOTON ABRIR */
+.BoxValidarTarjeta{
+  width: 80%;
+  max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
+  padding: 30px 10px;
+  margin: auto; /* Para entrar la página de forma horizontal*/
+  display: flex; /* Para trabajar con Flexbox para también usarlos en los elementos que contenga y moverlos*/
+  flex-direction: column; /* Para que el elemento se ponga en columna, de lo contrario permaneceria como fila*/
+  align-items: center; /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal*/
+}
+
+/*LA TARJETA*/
+
+.Tarjeta {
+  width: 100%; 
+  max-width: 500px; /* Para que no sea demasiado grande y estaria al mismo nivel que el box normal*/
+  position:relative; /* Al elemento padre le ponemos position relative y luego al elemento hijo le ponemos position absolute para que no aparezca debajo*/
+  color: white;
+  transition: .4s ease all; /* tiempo y función*/
+  transform: rotateY(0deg); /* para valor a la rotación y le ponemos 0 grados para que se quede fija en el eje */
+  transform-style: preserve-3d; /*3d para agregarle el efecto de giro 3d */
+  backface-visibility: hidden; /* nos permite que la parte de atras de la tarjeta este oculta cuando se gire*/
+  cursor: pointer;/* para que suceda cuando se pase el cursero*/
+  z-index: 2; /* nos permite establecer qué capa se muestre. 1:formulario  2:tarjeta 3:botón*/
+  
+}
+
+/* .Tarjeta:hover {
+  transform: rotateY(180deg); 
+} Para que cuando pase el cursor gire 180 grados pero para que gire cuando demos clic se debe agregar una funcion */
+
+.Tarjeta.active { /* Al dar clic girara 180 grados por la funcion active*/
+  transform: rotateY(180deg);
+} 
+
+.Tarjeta > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px rgba(90, 116, 148, 0.3);
+}
+
+/* TARJETA: DELANTERA */
+.Tarjeta .Delantera{
+  width: 100%;
+  background: url(./img/Tarjeta/Fondo.jpg);
+  background-size: cover; /* Para que la imagen se adapte y no se corte*/
+}
+
+.Delantera .Tipo-logo {
+  text-align: right;
+  min-height: 50px;
+}
+
+.Delantera .Tipo-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 70px;
+}
+
+.Delantera .Chip {
+  width: 100%;
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.Delantera .grupo .label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.Delantera .grupo .numero,
+.Delantera .grupo .nombre,
+.Delantera .grupo .expiracion {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase; /*Asegura que esten en mayusculas*/
+}
+
+.Delantera .flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* TARJETA: REVERSA */
+
+.Reversa {
+  background: url(./img/Tarjeta/Fondo.jpg);
+  background-size: cover;
+  position: absolute; /* mas el top de 0 se podrá esconder bajo la tarjeta delantera*/
+  top: 0;
+  transform: rotateY(180deg); /* Para que aparezca modo espejo*/
+  backface-visibility: hidden; /* Ocultar la parte de atrás*/
+}
+
+.Reversa .Barra {
+  height: 35px;
+  background: black;
+  width: 100%;
+  position: absolute; 
+  top: 30px;
+  left: 0;
+}
+
+.Reversa .Datos {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Reversa .Datos p {
+  margin-bottom: 5px;
+}
+
+.Reversa .grupo .label {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.Reversa .Datos #Firma {
+  width: 70%;
+}
+
+.Reversa .Datos #Firma .firma {
+  height: 30px;
+  background: repeating-linear-gradient(skyblue 0px, skyblue 4px, orange 4px, orange 8px );
+  
+}
+
+.Reversa .Datos #Firma .firma p {
+  line-height: 30px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  color: black;
+  font-size: 20px;
+  padding: 0 10px;
+  text-transform: capitalize; /* primera letra en mayúscula */
+}
+
+.Reversa .Datos #CCV {
+  width: 20%;
+}
+
+.Reversa .Datos #CCV .ccv {
+  background: white;
+  height: 24px;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+
+.Reversa .leyenda {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.Reversa .link-banco {
+  font-size: 12px;
+  color: white;
+}
+
+        /* MAIN: BLOQUEAR TARJETA */
+
+
+        /* MAIN: CONTACTANOS */
+
+
+        /* PIE DE PAGINA */
 .footer {
   position: fixed;
   left: 0;
@@ -67,179 +257,7 @@ body, html {
   padding-bottom: 10px;
   font-family: Roboto;
 }
-/* ICONOS DE REDES SOCIALES*/
+/* Iconos de las redes sociales*/
 .redSocial{
   width: 1.125rem;
 }
-
-/* ESTILO DE MAIN: BoxValidarTarjeta */
-
-.ValidarTarjeta{
-  height: 100%;
-  background: white;
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-.BoxValidarTarjeta{
-  width: 90%;
-  max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
-  padding: 40px 20px;
-  margin: auto; /* Para entrar la página de forma horizontal*/
-  display:flex; /* Para trabajar con Flexbox para también usarlos en los elementos que contenga y moverlos*/
-  flex-direction: column; /* Para que el elemento se ponga en columna, de lo contrario permaneceria como fila*/
-  align-items: center; /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal*/
-}
-
-/*ESTILO DE LA TARJETA*/
-
-.Tarjeta {
-  width: 100%; 
-  max-width: 550px; /* Para que no sea demasiado grande y estaria al mismo nivel que el box normal*/
-  position:relative; /* Al elemento padre le ponemos position relative y luego al elemento hijo le ponemos position absolute para que no aparezca debajo*/
-  color: white;
-  transition: .4s ease all; /* tiempo y función*/
-  transform: rotateY(0deg); /* para valor a la rotación y le ponemos 0 grados para que se quede fija en el eje */
-  transform-style: preserve-3d; /*3d para agregarle el efecto de giro 3d */
-  backface-visibility: hidden; /* nos permite que la parte de atras de la tarjeta este oculta cuando se gire*/
-  cursor: pointer;/* para que suceda cuando se pase el cursero*/
-  z-index: 2; /* nos permite establecer qué capa se muestre. 1:formulario  2:tarjeta 3:botón*/
-  
-}
-
-/* .Tarjeta:hover {
-  transform: rotateY(180deg);  
-} Para que cuando pase el cursor gire 180 grados pero para que gire cuando demos clic se debe agregar una funcion */
-
-.Tarjeta.active { /* Al dar clic girara 180 grados por la funcion active*/
-  transform: rotateY(180deg);
-} 
-
-
-.Tarjeta > div {
-  padding: 30px;
-  border-radius: 15px;
-  min-height: 315px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 10px 10px rgba(90, 116, 148, 0.3);
-}
-
-/* Estilo de la Tarjeta Delantera*/
-.Tarjeta .Delantera{
-  width: 100%;
-  background: url(./img/Tarjeta/Fondo.jpg);
-  background-size: cover;
-}
-
-.Delantera .Tipo-logo {
-  text-align: right;
-  min-height: 50px;
-}
-
-.Delantera .Tipo-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  max-width: 80px;
-}
-
-.Delantera .Chip {
-  width: 100%;
-  max-width: 60px;
-  margin-bottom: 20px;
-}
-
-.Delantera .grupo .label {
-  font-size: 14px;
-  color: white;
-  margin-bottom: 5px;
-}
-
-.Delantera .grupo .numero,
-.Delantera .grupo .nombre,
-.Delantera .grupo .expiracion {
-  color: white;
-  font-size: 14px;
-  text-transform: uppercase; /*Asegura que esten en mayusculas*/
-}
-
-.Delantera .flexbox {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-/* Estilo de la Tarjeta Reversa*/
-
-.Reversa {
-  background: url(./img/Tarjeta/Fondo.jpg);
-  background-size: cover;
-  position: absolute; /* mas el top de 0 se podrá esconder bajo la tarjeta delantera*/
-  top: 0;
-  transform: rotateY(180deg); /* Para que aparezca modo espejo*/
-  backface-visibility: hidden; /* Ocultar la parte de atrás*/
-}
-
-.Reversa .Barra {
-  height: 40px;
-  background: black;
-  width: 100%;
-  position: absolute; 
-  top: 30px;
-  left: 0;
-}
-
-.Reversa .Datos {
-  margin-top: 60px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.Reversa .Datos p {
-  margin-bottom: 5px;
-}
-
-.Reversa .Datos #Firma {
-  width: 70%;
-}
-
-.Reversa .Datos #Firma .firma {
-  height: 40px;
-  background: repeating-linear-gradient(skyblue 0px, skyblue 4px, orange 4px, orange 8px );
-}
-
-.Reversa .Datos #Firma .firma p {
-  line-height: 40px;
-  font-family: 'Liu Jian Mao Cao', cursive;
-  color: black;
-  font-size: 30px;
-  padding: 0 10px;
-  text-transform: capitalize;
-}
-
-.Reversa .Datos #CCV {
-  width: 20%;
-}
-
-.Reversa .Datos #CCV .ccv {
-  background: white;
-  border-radius: 5px;
-  height: 40px;
-  color: black;
-  padding: 10px;
-  text-align: center;
-}
-
-.Reversa .leyenda {
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.Reversa .link-banco {
-  font-size: 14px;
-  color: white;
-}
-

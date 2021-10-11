@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>BCS Verify®</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon --> 
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon/favicon.ico">
   </head>
   <body>
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- Barra de Navegación -->
     <header>
       <button class="BoxNavs" onclick="openPage('Inicio', this,'rgb(10 40 65)')">SOBRE NOSOTROS</button>
       <button class="BoxNavs" onclick="openPage('ValidarTarjeta', this, 'rgb(45 122 72)')" id="defaultOpen">VALIDAR TARJETA</button>
@@ -15,6 +16,7 @@
       <button class="BoxNavs" onclick="openPage('Contactanos', this, 'rgb(48 129 129)')">CONTÁCTANOS</button>
     </header> 
 
+    <!-- Página de la información sobre la compañía -->
     <main id="Inicio" class="Box">
       <div id="BoxIntro">
         
@@ -24,7 +26,7 @@
         <img class="LogoCuadrado" src="./img/Logos/LogoCuadrado.png" alt="BCS Verify®">
       </div>
     </main>
-      
+    <!-- Página para la Validación de Tarjeta -->  
     <main id="ValidarTarjeta" class="Box">
       <div id="BoxIntro">
         
@@ -34,21 +36,29 @@
       </div>
 
       <div class="BoxValidarTarjeta">
-        <section class="Tarjeta active" id="Tarjeta">
+        <!-- Tarjeta -->
+        <section class="Tarjeta" id="Tarjeta">
+
+          <!-- Parte delantera de la Tarjeta -->
           <div class="Delantera">
+            <!-- Logo del banco -->
             <div class="Tipo-logo">
               <img src="./img/Tarjeta/Visa.png" alt="Visa">
             </div>
+            <!-- Imagen del chip -->
             <img src="./img/Tarjeta/chip-tarjeta.png" class="Chip" alt="Chip">
+            <!-- Contenedor de los Datos -->
             <div class="Datos">
+
               <div class="grupo" id="Numero">
                 <p class="label">Número Trajeta</p>
                 <p class="numero">#### #### #### ####</p>
               </div>
 
               <div class="flexbox">
+
                 <div class="grupo" id="Nombre">
-                  <p class="label">Nombre Trajeta</p>
+                  <p class="label">Nombre y Apellido</p>
                   <p class="nombre">Mario Diaz</p>
                 </div>
 
@@ -60,8 +70,11 @@
             </div>
           </div>
 
+          <!-- Parte delantera de la Tarjeta -->
           <div class="Reversa">
+            <!-- Barra Magnética -->
             <div class="Barra"></div>
+            <!-- Contenedor de los Datos -->
             <div class="Datos">
               <div class="grupo" id="Firma">
                 <p class="label">Firma</p>
@@ -72,32 +85,41 @@
                 <p class="ccv"></p>
               </div>
             </div>
-            <p class="leyenda"> En esta parte se ingresará texto que aun no ha sido definido.</p>
+            <!-- Contenedor de la Leyenda -->
+            <p class="leyenda"> En esta parte se ingresará texto que aun no ha sido definido.En esta parte se ingresará texto que aun no ha sido definido.En esta parte se ingresará texto que aun no ha sido definido.</p>
             <a href="#" class="link-banco">www.tubanco.com</a>
           </div>
-        </section>    
+        </section> 
+
+        <!-- Botón para abrir y cerrar el Formulario -->
+        <div class="BoxBoton">
+          <button class="abrirFormulario" id="AbrirFormulario"><i class="fa-duotone fa-circle-plus"></i></button>
+        </div>
+        
+        <!-- Formulario -->
       </div>
     </main>
-      
-      <main id="BloquearTarjeta" class="Box">
-        <div id="BoxIntro">
+      <!-- Página para el Bloqueo de Tarjeta --> 
+    <main id="BloquearTarjeta" class="Box">
+      <div id="BoxIntro">
           
-          <h3>¿Cómo bloquear tu tarjeta?</h3>
-          <p>Si tienes problemas con tu tarjeta o has sufrido cualquier robo o estafa, podrás proceder a bloquear tu tarjeta llenando tus datos y a un solo clic.</p><hr>
-          <img src="./img/Logos/LogoRecBlanco.jpg" class="LogoRecBlanco" alt="BCS Verify®">
-      </div>
-      </main>
-      
-      <main id="Contactanos" class="Box">
-        <div id="BoxIntro"></div>
-          
-          <h3>¿Cómo contactarnos?</h3>
-          <p>Para cualquier información puedrás comunicarte con nosotros a traves de la linea telefonica gratuita y en nuestras redes sociales. Atendemos las 24h al dia los 365 dias del año.</p><hr>
-          <img src="./img/Logos/LogoGifContac.gif" class="LogoGifContac" alt="BCS Verify®">
-        <div id="BoxIntro"></div>
-      </main>
+        <h3>¿Cómo bloquear tu tarjeta?</h3>
+        <p>Si tienes problemas con tu tarjeta o has sufrido cualquier robo o estafa, podrás proceder a bloquear tu tarjeta llenando tus datos y a un solo clic.</p><hr>
+        <img src="./img/Logos/LogoRecBlanco.jpg" class="LogoRecBlanco" alt="BCS Verify®">
+        </div>
+    </main>
 
-        
+    <!-- Página para la información de Contacto --> 
+    <main id="Contactanos" class="Box">
+      <div id="BoxIntro"></div>
+          
+        <h3>¿Cómo contactarnos?</h3>
+        <p>Para cualquier información puedrás comunicarte con nosotros a traves de la linea telefonica gratuita y en nuestras redes sociales. Atendemos las 24h al dia los 365 dias del año.</p><hr>
+        <img src="./img/Logos/LogoGifContac.gif" class="LogoGifContac" alt="BCS Verify®">
+      <div id="BoxIntro"></div>
+    </main>
+
+    <!-- Barra inferior  -->     
     <footer class="footer">
       El contenido de esta página web es con fines educativos personales. La idea del proyecto "CCS Verify®" no existe. <br> Lima - Perú | 2021 <br> 
 
@@ -107,6 +129,7 @@
       <a href="https://www.linkedin.com/in/rosamaria-rodriguez-6904a1191/"><img src="./img/Redes sociales/icons8-linkedin-30.png" class="redSocial" alt="Mi LinkenIn"></a> 
 
     </footer>
+    <!-- Función para la sincronización de páginas con la Barra de Navegación --> 
     <script>
       function openPage(pageName,elmnt,color) {
         var i, Box, BoxNavs;
