@@ -34,4 +34,3 @@ for(let i = AnioActual; i <= AnioActual + 11; i++){
     opcion.innerText = i;
     formulario.SelecionarAnio.appendChild(opcion);
 }
-
