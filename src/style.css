@@ -413,10 +413,14 @@ button.verificar {
 
 
         /* MAIN: CONTACTANOS */
-
+.GifContactanos {
+  width: 33.12%;
+  background-position: center;
+}
 
         /* PIE DE PAGINA */
 .footer {
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
