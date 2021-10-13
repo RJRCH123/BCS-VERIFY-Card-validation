@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 /* Establezca la altura del cuerpo y del documento al 100% para habilitar las "pestañas de página completa". */
 body, html {
   height: 100%;
@@ -11,6 +13,7 @@ body, html {
 }
 
         /* BARRA DE NAVEGACIÓN */
+
 .BoxNavs {
   background-color: #555;
   color: white;
@@ -29,6 +32,10 @@ body, html {
   font-family: Roboto;
 }
 
+.GifNav {
+  width: 100%;
+}
+
 /* LOGOS */
 .LogoGifContac {
   width: 200px;
@@ -36,19 +43,16 @@ body, html {
 .LogoRecBlanco {
   width: 200px;
 }
-.LogoCuadrado {
-  width: 500px;
-}
+
 
         /* PÁGINAS */
 
 /* Diseñe el contenido de la pestaña (y agregue altura: 100% para el contenido de la página completa) */
 .Box {
-  color: rgb(0, 0, 0);
   display: none;
-  padding: 100px 20px;
+  padding: 0;
   height: 100%;
-  font-family: Roboto;
+  font-family:'Poppins', sans-serif;
 }
 
 #Inicio {background-color: rgb(255, 255, 255);}
@@ -57,6 +61,51 @@ body, html {
 #Contactanos {background-color: rgb(255, 255, 255);}
 
         /* MAIN: INICIO */
+
+.BoxIntro {
+  font-size: 14px;
+  padding: 5px 20px;
+}
+.BoxIntro p{
+  color: black;
+  font-size: 12px;
+}
+
+.BoxIntro h2 {
+  color: rgb(10 40 65);
+  font-size: 14px;
+}
+
+.BoxInfo {
+  margin: 0 auto;
+  width: 1000px;
+  height: 300px;
+  padding: 20px 5px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 1fr;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Info h2 {
+  color: rgb(10 40 65);
+  font-size: 14px;
+}
+
+.Info h3 {
+  color: #555;
+  font-size: 14px;
+}
+
+.Info p {
+  color: black;
+  font-size: 12px;
+}
+
+.Info img {
+  width: 40%;
+}
 
         /* MAIN: VALIDAR TARJETA */
 
@@ -240,11 +289,6 @@ body, html {
   line-height: 15px;
 }
 
-.Reversa .link-banco {
-  font-size: 12px;
-  color: white;
-}
-
 /* BOTÓN ABRIR FORMULARIO*/
 
 .BoxBoton .abrirFormulario {
@@ -373,7 +417,6 @@ button.verificar {
 
         /* PIE DE PAGINA */
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -385,6 +428,7 @@ button.verificar {
   padding-bottom: 10px;
   font-family: Roboto;
 }
+
 /* Iconos de las redes sociales*/
 .redSocial{
   width: 1.125rem;
