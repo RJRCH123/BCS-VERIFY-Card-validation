@@ -83,7 +83,7 @@ body, html {
   padding: 20px 5px;
   display: grid;
   grid-template-columns: 500px 500px;
-  grid-template-rows: 1fr;
+  grid-gap: 50px;
   text-align: justify;
   font-family: 'Poppins', sans-serif;
 }
@@ -104,7 +104,7 @@ body, html {
 }
 
 .Info img {
-  width: 40%;
+  width: 30%;
 }
 
         /* MAIN: VALIDAR TARJETA */
