@@ -11,7 +11,10 @@ document.getElementById("defaultOpen").click();
 
 const Tarjeta = document.querySelector('#Tarjeta'),
   abrirFormulario = document.querySelector('#AbrirFormulario'),
-  formulario = document.querySelector('#Formulario');
+  formulario = document.querySelector('#Formulario'),
+  numeroTarjeta = document.querySelector('#numero'),
+  nombreTarjeta = document.querySelector('#nombre'),
+  TipoMarca = document.querySelector('#Tipo-Marca');
 
 // Rotación de la Tarjeta
 Tarjeta.addEventListener('click', () => {
@@ -51,5 +54,25 @@ formulario.InputNumero.addEventListener('keyup', (e) => {
   .replace(/\D/g, '')
   .replace(/([0-9]{4})/g, '$1 ')
   .trim();
+
+  numeroTarjeta.textContent = valorInput;
+
+	if(valorInput == ''){
+		numeroTarjeta.textContent = '#### #### #### ####';
+
+		TipoMarca.innerHTML = '';
+	}
+
+	if(valorInput[0] == 4){
+		TipoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/Tarjeta/Visa.png';
+		TipoMarca.appendChild(imagen);
+	} else if(valorInput[0] == 5){
+		TipoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/Tarjeta/MasterCard.png';
+		TipoMarca.appendChild(imagen);
+	}
 });
 
