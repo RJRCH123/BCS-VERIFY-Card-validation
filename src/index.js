@@ -40,3 +40,16 @@ for(let i = AnioActual; i <= AnioActual + 11; i++){
   opcion.innerText = i;
   formulario.SelecionarAnio.appendChild(opcion);
 }
+
+//Input del Numero de Tarjeta
+
+formulario.InputNumero.addEventListener('keyup', (e) => {
+  let valorInput = e.target.value;
+
+  formulario. InputNumero.value = valorInput
+  .replace(/\s/g, '')
+  .replace(/\D/g, '')
+  .replace(/([0-9]{4})/g, '$1 ')
+  .trim();
+});
+
