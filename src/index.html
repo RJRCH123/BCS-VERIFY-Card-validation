@@ -30,12 +30,14 @@
           <h3>¿Quiénes trabajan con BCS Verify®?</h3>
           <p> Trabajamos con las siguientes redes globales de tecnología que garantizan que puedas usar tu tarjeta de crédito o de débito en otros países:</p>
           <img src="./img/Tarjeta/MasterCard.png" alt="MasterCard">
+          <img src="./img/Tarjeta/AmericanEx.png" alt="AmericanEx">
           <img src="./img/Tarjeta/VisaColor.png" alt="Visa">
+          
         </div>
         <div class="Info">
           <h2>SEGURIDAD</h2>
           <h3>¿Existe riesgo al usar BCS Verify®?</h3>
-          <p>Bank Card Security Verify® le brinda total confidencialidad en cualquier ordenador. Contamos con un sistema de seguridad de alta gama y tenemos el respaldo de nuestros bancos afiliados. La base de datos no archivará su información personal. Tenga la seguridad que sus información no se expondrán a manos equívocas. <br><br>
+          <p>Bank Card Security Verify® le brinda total confidencialidad en cualquier ordenador. Contamos con un sistema de seguridad de alta gama y tenemos el respaldo de nuestros afiliados. La base de datos no archivará su información personal. Tenga la seguridad que sus información no se expondrán a manos equívocas. <br><br>
           Sin embargo, al usar BCS Verify® deberá tener precaución y hacerlo de forma privada, sin personas desconocidas alrededor, para así evitar que alguien pueda observar sus información.</p> 
         </div>
       </div>
@@ -93,7 +95,7 @@
               </div>
               <div class="grupo" id="CCV">
                 <p class="label">CCV</p>
-                <p class="ccv" id="cvv"></p>
+                <p class="ccv" id="ccv"></p>
               </div>
             </div>
             <!-- Contenedor de la Leyenda -->
@@ -121,28 +123,27 @@
             <input type="text" id="InputNombre" maxlength="40" autocomplete="off">
           </div>
 
-          <!-- Formulario -->
           <div class="flexbox">
             <div class="grupoExpira">
-              <label for="SelecionarMes">Expiración</label>
+              <label for="labelExpira">Expiración</label>
               <div class="flexbox">
                 <!-- Grupo Input Expiración -->
                 <div class="grupoSeleccionable">
-                  <select name="Mes" id="SelecionarMes">
+                  <select name="Mes" id="SeleccionarMes">
                     <option disabled selected>Mes</option>
                   </select>
                 </div>
                 <div class="grupoSeleccionable">
-                  <select name="Anio" id="SelecionarAnio">
+                  <select name="Anio" id="SeleccionarAnio">
                     <option disabled selected>Año</option>
                   </select>
                 </div>
               </div>
             </div>
             <!-- CVV -->
-            <div class="grupoCVV">
-              <label for="InputCVV">CVV</label>
-              <input type="text" id="InputCVV" maxlength="3">
+            <div class="grupoCCV">
+              <label for="InputCCV">CCV</label>
+              <input type="text" id="InputCCV" maxlength="3">
             </div>
           </div>
           <!-- Botón Verificar Validación -->

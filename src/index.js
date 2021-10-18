@@ -18,7 +18,7 @@ const Tarjeta = document.querySelector('#Tarjeta'),
   Firma = document.querySelector('#Tarjeta .firma p'),
   ExpiraMes = document.querySelector('#Tarjeta .mes'),
   ExpiraAnio = document.querySelector('#Tarjeta .anio'),
-  CCV = document.querySelector('#Tarjeta .cvv');
+  CCV = document.querySelector('#Tarjeta .ccv');
 
 
 // Voltear la Tarjeta para mostrarse adelante de forma automática
@@ -43,7 +43,7 @@ for(let i = 1; i <=12; i++){
   let opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
-  formulario.SelecionarMes.appendChild(opcion);
+  formulario.SeleccionarMes.appendChild(opcion);
 }
 
 // Lista de Selección Año
@@ -52,7 +52,7 @@ for(let i = AnioActual; i <= AnioActual + 11; i++){
   let opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
-  formulario.SelecionarAnio.appendChild(opcion);
+  formulario.SeleccionarAnio.appendChild(opcion);
 }
 
 //Input del Numero de Tarjeta
@@ -74,14 +74,20 @@ formulario.InputNumero.addEventListener('keyup', (e) => {
 		TipoMarca.innerHTML = '';
 	}
 
-  // Reconocer si es Visa o MasterCard
+  // Reconocer si es Visa, MasterCard, AmericanExpress
 	if(valorInput[0] == 4){
 		TipoMarca.innerHTML = '';
 		const imagen = document.createElement('img');
 		imagen.src = 'img/Tarjeta/Visa.png';
 		TipoMarca.appendChild(imagen);
-
-	} else if(valorInput[0] == 5){
+    
+  } if(valorInput[0] == 3){
+    TipoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/Tarjeta/AmericanEx.png';
+		TipoMarca.appendChild(imagen);
+  
+  } else if(valorInput[0] == 5){
 		TipoMarca.innerHTML = '';
 		const imagen = document.createElement('img');
 		imagen.src = 'img/Tarjeta/MasterCard.png';
@@ -109,28 +115,29 @@ formulario.InputNombre.addEventListener('keyup', (e) => {
 	mostrarAdelante();
 });
 
-// Select Mes y Año
+// Select Mes 
 formulario.SeleccionarMes.addEventListener('change', (e) => {
   ExpiraMes.textContent = e.target.value;
 	mostrarAdelante();
 });
 
+// Select Año
 formulario.SeleccionarAnio.addEventListener('change', (e) => {
   ExpiraAnio.textContent = e.target.value.slice(2);
 	mostrarAdelante();
 });
 
 // * CCV
-formulario.inputCCV.addEventListener('keyup', () => {
+formulario.InputCCV.addEventListener('keyup', () => {
 	if(!Tarjeta.classList.contains('active')){
 		Tarjeta.classList.toggle('active');
 	}
 
-  formulario.inputCCV.value = formulario.inputCCV.value
+  formulario.InputCCV.value = formulario.InputCCV.value
 	// Eliminar los espacios
 	.replace(/\s/g, '')
 	// Eliminar las letras
 	.replace(/\D/g, '');
 
-	CCV.textContent = formulario.inputCCV.value;
+	CCV.textContent = formulario.InputCCV.value;
 });
