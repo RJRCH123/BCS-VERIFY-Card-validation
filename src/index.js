@@ -1,9 +1,3 @@
-// import validator from './validator.js';
-
-// console.log(validator);
-
-
-
 
 // Obtenga el elemento con id = "defaultOpen" y haga clic en él
 document.getElementById("defaultOpen").click();
@@ -81,10 +75,16 @@ formulario.InputNumero.addEventListener('keyup', (e) => {
 		imagen.src = 'img/Tarjeta/Visa.png';
 		TipoMarca.appendChild(imagen);
     
-  } if(valorInput[0] == 3){
+  } if(valorInput[0] == 3 && valorInput[1] == 4 || valorInput[0] == 3 && valorInput[1] == 7 ){
     TipoMarca.innerHTML = '';
 		const imagen = document.createElement('img');
 		imagen.src = 'img/Tarjeta/AmericanEx.png';
+		TipoMarca.appendChild(imagen);
+  
+  } if(valorInput[0] == 3 && valorInput[1] == 6){
+    TipoMarca.innerHTML = '';
+		const imagen = document.createElement('img');
+		imagen.src = 'img/Tarjeta/DinersClub.png';
 		TipoMarca.appendChild(imagen);
   
   } else if(valorInput[0] == 5){
@@ -141,3 +141,33 @@ formulario.InputCCV.addEventListener('keyup', () => {
 
 	CCV.textContent = formulario.InputCCV.value;
 });
+
+// VALIDAR TARJETA 
+
+// import validator from './validator.js';
+
+// console.log(validator);
+
+// function ObtenerNumero() {
+//   const InputNumero = document.getElementById('InputNumero').value;
+//   const totalValidator = validator.isValid(InputNumero);
+
+//   // Botón de nueva validación 
+//   Verificar.style.display = 'none';
+//   NuevaVerificacion.style.display = 'block';
+
+//   // Alert que indica la validez de la tarjeta
+
+//   for (let i = 0; i < alertContainer.length; i++) {
+//     if (totalValidator === true) {
+//       alertContainer[i].style.display = 'block';
+//       noValid[i].style.display = 'none';
+//       valid[i].style.display = 'block';
+//     } else {
+//       alertContainer[i].style.display = 'block';
+//       noValid[i].style.display = 'block';
+//       valid[i].style.display = 'none';  
+//     }
+//   },
+// }
+// document.getElementById('Verificar').addEventListener('click',ObtenerNumero);

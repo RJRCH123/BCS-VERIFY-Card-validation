@@ -29,9 +29,11 @@
           <h2>NUESTROS AFILIADOS</h2>
           <h3>¿Quiénes trabajan con BCS Verify®?</h3>
           <p> Trabajamos con las siguientes redes globales de tecnología que garantizan que puedas usar tu tarjeta de crédito o de débito en otros países:</p>
+          <img src="./img/Tarjeta/Diners-Club.png" alt="DinersClub">
           <img src="./img/Tarjeta/MasterCard.png" alt="MasterCard">
           <img src="./img/Tarjeta/AmericanEx.png" alt="AmericanEx">
           <img src="./img/Tarjeta/VisaColor.png" alt="Visa">
+          
           
         </div>
         <div class="Info">
@@ -48,7 +50,7 @@
       <div class="BoxIntro">
         <h2>¿Cómo validar tu tarjeta?</h2>
         <p>A continuación llena los datos correspondientes para confirmar si tu tarjeta esta vigente aún. Si aparece como inválida, significa que ya está bloqueada.</p><hr>
-      </div>
+      </div><br><br>
 
       <div class="BoxValidarTarjeta">
         <!-- Tarjeta -->
@@ -95,7 +97,7 @@
               </div>
               <div class="grupo" id="CCV">
                 <p class="label">CCV</p>
-                <p class="ccv" id="ccv"></p>
+                <em><p class="ccv" id="ccv"></p></em>
               </div>
             </div>
             <!-- Contenedor de la Leyenda -->
@@ -115,7 +117,7 @@
 
           <div class="grupo">
             <label for="InputNumero">Número de Tarjeta</label>
-            <input type="text" id="InputNumero" maxlength="19" autocomplete="off">
+            <input type="text" name="" class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off">
           </div>
 
           <div class="grupo">
@@ -147,9 +149,19 @@
             </div>
           </div>
           <!-- Botón Verificar Validación -->
-          <button type="submit" class="verificar">Verificar</button>
+          <button type="submit"  id="Verificar" class="verificar">Verificar</button>
+
+          <!-- <button  type="reset" id="NuevaVerificacion" style="display: none">Nueva validación</button> -->
+
         </form>
-      </div>
+      </div><br><br>
+      <div class="alert-container" style="display: none">
+        <div class="alert-p">
+          <p class="valid">La Tarjeta es válida ✔️</p>
+          <p class="no-valid">La Tarjeta no es válida ❌</p>
+        </div>
+      </div>  
+
     </section>
       <!-- Página para el Bloqueo de Tarjeta --> 
     <section id="BloquearTarjeta" class="Box">
