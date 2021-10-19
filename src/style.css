@@ -44,6 +44,19 @@ body, html {
   width: 200px;
 }
 
+        /* BARRA DE SCROLL */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(10 40 65);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #545555ba;
+  border-radius: 50px;
+}
 
         /* PÁGINAS */
 
