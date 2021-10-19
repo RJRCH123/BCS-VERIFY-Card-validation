@@ -413,10 +413,16 @@ button.verificar {
 
 
         /* MAIN: CONTACTANOS */
-.GifContactanos {
+
+.GifContacPag{
+  width: 100%;
+  height: 100%;
+}
+
+/* .GifContactanos {
   width: 33.12%;
   background-position: center;
-}
+} */
 
 /* .GifContactanos:hover {
   
