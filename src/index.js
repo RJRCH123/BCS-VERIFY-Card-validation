@@ -143,43 +143,13 @@ formulario.InputCCV.addEventListener('keyup', () => {
 	CCV.textContent = formulario.InputCCV.value;
 });
 
-// VALIDAR TARJETA 
-
-// import validator from './validator.js';
-
-// console.log(validator);
-
-// function ObtenerNumero() {
-//   const InputNumero = document.getElementById('InputNumero').value;
-//   const totalValidator = validator.isValid(InputNumero);
-
-//   // Botón de nueva validación 
-//   Verificar.style.display = 'none';
-//   NuevaVerificacion.style.display = 'block';
-
-//   // Alert que indica la validez de la tarjeta
-
-//   for (let i = 0; i < alertContainer.length; i++) {
-//     if (totalValidator === true) {
-//       alertContainer[i].style.display = 'block';
-//       noValid[i].style.display = 'none';
-//       valid[i].style.display = 'block';
-//     } else {
-//       alertContainer[i].style.display = 'block';
-//       noValid[i].style.display = 'block';
-//       valid[i].style.display = 'none';  
-//     }
-//   },
-// }
-// document.getElementById('Verificar').addEventListener('click',ObtenerNumero);
-
 
 //Input del Numero de Tarjeta para la página Bloquear
 
-formularioBloquear.InputNumero.addEventListener('keyup', (e) => {
+formularioBloquear.InputNumeroB.addEventListener('keyup', (e) => {
   let valorInput = e.target.value;
 
-  formularioBloquear. InputNumero.value = valorInput
+  formularioBloquear. InputNumeroB.value = valorInput
   .replace(/\s/g, '') // Eliminamos espacios en blanco
   .replace(/\D/g, '') // Eliminar las letras
   .replace(/([0-9]{4})/g, '$1 ') // Ponemos espacio cada cuatro numeros
@@ -192,3 +162,58 @@ formularioBloquear.InputNombre.addEventListener('keyup', (e) => {
 
 	formularioBloquear.InputNombre.value = valorInput.replace(/[0-9]/g, '');
 });
+
+// IMPORTACIÓN DEL CÓDIGO ISVALID Y MASKIFY 
+
+// PARA LA PAGINA VALIDAR
+
+import validator from './validator.js';
+
+let botonValidar = document.getElementById('Verificar')
+botonValidar.addEventListener('click', () => {
+    let NumeroDeTarjeta = document.getElementById('InputNumero').value;
+    //console.log('Me diste click: ' + NumeroDeTarjeta);
+
+    let resultValidator = validator.isvalid(NumeroDeTarjeta.replace(/\s/g, ''));
+    //console.log(resultValidator);
+
+    // if (resultValidator === true) {
+    //     alert('Tarjeta valida');
+    // }else{
+    //     alert('Tarjeta invalida')
+    // }
+
+    let maskNumero = validator.maskify(NumeroDeTarjeta.replace(/\s/g, ''));
+    //console.log(maskNumero);
+
+    resultValidator === true?alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA'+ ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.'):alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.');
+
+});
+
+//console.log(validator);
+
+// PARA LA PAGINA BLOQUEAR
+
+let botonBloquear = document.getElementById('Bloquear')
+botonBloquear.addEventListener('click', () => {
+    let NumeroDeTarjeta = document.getElementById('InputNumeroB').value;
+    //console.log('Me diste click: ' + NumeroDeTarjeta);
+
+    let resultValidator = validator.isvalid(NumeroDeTarjeta.replace(/\s/g, ''));
+    //console.log(resultValidator);
+
+    // if (resultValidator === true) {
+    //     alert('Tarjeta valida');
+    // }else{
+    //     alert('Tarjeta invalida')
+    // }
+
+    let maskNumero = validator.maskify(NumeroDeTarjeta.replace(/\s/g, ''));
+    //console.log(maskNumero);
+
+    resultValidator === true?alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad fue enviada.'):alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad no fue enviada');
+
+});
+
+//console.log(validator);
+

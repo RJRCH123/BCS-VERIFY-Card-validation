@@ -1,59 +1,73 @@
-// const validator = {
-//   isValid: function(InputNumero){
-//     const ReversaInputNumero = InputNumero.toString().split('').reverse().map(Number);
-//     console.log(ReversaInputNumero);
-
-//     // Alert para que no dejen el input vacío
-//     if(ReversaInputNumero.length === 0){
-//       alert('Para ayudarte debes llenar este campo.');
-//       return 0;
-//     }
-//     // Operación a las posiciones pares 
-//     let ArregloPosicionPar = ReversaInputNumero.map((num, i) => {
-//       if (i % 2 === 1){
-//         const Doble = (num * 2);
-//         const x = Doble.toString().split('').reduce(function(a,b){
-//           if ( Doble >= 10) {
-//             return a + parseInt(b);
-//           } else {
-//             return Doble;
-//           }
-//         }, 0);
-//         return x;
-//       } else {
-//         return num;
-//       }
-//     });
-//     //console.log(ArregloPosicionPar);
+const validator = {
+  isvalid: (NumeroDeTarjeta) => {
     
-//     // Sumar todos los números del arreglo
-//     ArregloPosicionPar = ArregloPosicionPar.reduce((previus, next) => {
-//       const  suma = previus + next;
-//       return suma;
-//     }, 0);
-//     //console.log(ArregloPosicionPar); 
+    let ObtNumTarjeta = NumeroDeTarjeta; // Obtenemos el número de la tarjeta
+    //console.log(ObtNumTarjeta);
 
-//     if(ArregloPosicionPar % 10 === 0){
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   },
+    let stringNumeroDeTarjeta = ObtNumTarjeta.split(""); // Obtnemos el número en una cadena y en reversa
+    //console.log(stringNumeroDeTarjeta);
 
-// maskify: function(InputNumero){
-//   let value = InputNumero.toString();
-//   //Números que estarán ocultos
-//   let ReemplazablesNumeros = value.slice (0, -4);
-//   //Números que serán visibles
-//   let NoReemplazablesNumeros = value.slice(-4);
-//   //Nuevo arreglo para ocultar números
-//   let ArregloOcultar = ReemplazablesNumeros.split('').map(function() {
-//     return '#';
-//   });
-//   ArregloOcultar = ArregloOcultar.join('');
-//   return ArregloOcultar.concat(NoReemplazablesNumeros);
-// }
-// }
+    // let reverseNumeroDeTarjeta = stringNumeroDeTarjeta.reverse(); // Obtenemos el número en reversa
+    // console.log(reverseNumeroDeTarjeta);
 
-// export default validator;
+    let parNumero = [];
+    let doubleNumero = [];
+    let finalNumero = [];
+
+    let sumNumero = 0;
+
+    if ((ObtNumTarjeta.length === 18) || (ObtNumTarjeta.length === 16) || (ObtNumTarjeta.length === 14)) {
+      for (let i = stringNumeroDeTarjeta.length-1; i >= 0; i--) {
+        if (i % 2 !== 0) {
+          parNumero.push(stringNumeroDeTarjeta[i]);
+        }else {
+          doubleNumero.push((stringNumeroDeTarjeta[i] *2).toString());
+        }
+      }
+    } else if ((ObtNumTarjeta.length <= 19) || (ObtNumTarjeta.length === 17) (ObtNumTarjeta.length === 15) || (ObtNumTarjeta.length === 13)) {
+      for (let i = stringNumeroDeTarjeta.length-1; i >= 0; i--) {
+        if (i % 2 === 0) {
+          parNumero.push(stringNumeroDeTarjeta[i]);
+        }else {
+          doubleNumero.push((stringNumeroDeTarjeta[i]*2).toString());
+        }
+      }
+    }
+
+    doubleNumero = doubleNumero.join("").split("");
+    finalNumero = doubleNumero.concat(parNumero);
+
+    for (let index = 0; index < finalNumero.length; index++) {
+      sumNumero += parseInt(finalNumero[index], 10);
+    }
+
+    //console.log(sumNumero);
+
+    if (sumNumero % 10 === 0) {
+      return true;
+    }else{
+      return false;
+    }
+
+    //console.log(parNumero);
+  },
+
+  maskify: (NumeroDeTarjeta) => {
+
+    let mask = "";
+
+    for (let i = 0; i < NumeroDeTarjeta.length; i++) {
+
+      if (i <= NumeroDeTarjeta.length -5) {
+        mask += "#";
+      }else{
+        mask += NumeroDeTarjeta[i];
+      }
+    }
+    //console.log(mask);
+    return mask;
+  }
+};
+
+export default validator;
 
