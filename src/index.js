@@ -12,7 +12,8 @@ const Tarjeta = document.querySelector('#Tarjeta'),
   Firma = document.querySelector('#Tarjeta .firma p'),
   ExpiraMes = document.querySelector('#Tarjeta .mes'),
   ExpiraAnio = document.querySelector('#Tarjeta .anio'),
-  CCV = document.querySelector('#Tarjeta .ccv');
+  CCV = document.querySelector('#Tarjeta .ccv'),
+  formularioBloquear = document.querySelector('#FormularioBloquear');
 
 
 // Voltear la Tarjeta para mostrarse adelante de forma automática
@@ -49,7 +50,7 @@ for(let i = AnioActual; i <= AnioActual + 11; i++){
   formulario.SeleccionarAnio.appendChild(opcion);
 }
 
-//Input del Numero de Tarjeta
+//Input del Numero de Tarjeta para la página Validar
 
 formulario.InputNumero.addEventListener('keyup', (e) => {
   let valorInput = e.target.value;
@@ -171,3 +172,23 @@ formulario.InputCCV.addEventListener('keyup', () => {
 //   },
 // }
 // document.getElementById('Verificar').addEventListener('click',ObtenerNumero);
+
+
+//Input del Numero de Tarjeta para la página Bloquear
+
+formularioBloquear.InputNumero.addEventListener('keyup', (e) => {
+  let valorInput = e.target.value;
+
+  formularioBloquear. InputNumero.value = valorInput
+  .replace(/\s/g, '') // Eliminamos espacios en blanco
+  .replace(/\D/g, '') // Eliminar las letras
+  .replace(/([0-9]{4})/g, '$1 ') // Ponemos espacio cada cuatro numeros
+  .trim(); // Elimina el ultimo espaciado
+});
+
+// Input nombre de Tarjeta
+formularioBloquear.InputNombre.addEventListener('keyup', (e) => {
+	let valorInput = e.target.value;
+
+	formularioBloquear.InputNombre.value = valorInput.replace(/[0-9]/g, '');
+});

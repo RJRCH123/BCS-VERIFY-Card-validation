@@ -22,7 +22,7 @@
       <img class="GifNav" src="./img/Videos/Bienvenidos.gif" alt="BCS Verify®">
       <div class="BoxIntro">
         <h2>Bienvenidos a BCS Verify®</h2>
-        <p>Esta compañía se enfoca en ayudar a los usuarios con cualquier tipo de tarjeta de crédito para evitar cualquier tipo de estafas. <strong>En esta página podrás bloquear y validar tu tarjeta desde cualquier ordenador o dispositivo móvil.</strong> Además, podrás contar con una línea totalmente gratuita para poder solicitar ayuda las 24 horas diarias.</p><hr><br>
+        <p>Esta compañía se enfoca en ayudar a los usuarios con cualquier tipo de tarjeta de crédito para evitar cualquier tipo de estafas. <strong>En esta página podrá bloquear y validar tu tarjeta desde cualquier ordenador o dispositivo móvil.</strong> Además, podrás contar con una línea totalmente gratuita para poder solicitar ayuda las 24 horas diarias.</p><hr><br>
       </div>
       <div class="BoxInfo">
         <div class="Info">
@@ -49,7 +49,7 @@
       <img class="GifNav" src="./img/Videos/Valida.gif" alt="BCS Verify®">
       <div class="BoxIntro">
         <h2>¿Cómo validar tu tarjeta?</h2>
-        <p>A continuación llena los datos correspondientes para confirmar si tu tarjeta esta vigente aún. Si aparece como inválida, significa que ya está bloqueada.</p><hr>
+        <p>A continuación llene los datos correspondientes para confirmar si su tarjeta está vigente aún. Si aparece como inválida, significa que ya está bloqueada.<strong> PRECAUCIÓN:</strong> Debido a tener los datos expuestos en pantalla, podrá esconderla tantas veces sea necesaria, solamente deberá dar click al botón circular.</p><hr>
       </div><br><br>
 
       <div class="BoxValidarTarjeta">
@@ -161,8 +161,28 @@
     <section id="BloquearTarjeta" class="Box">
       <img class="GifNav" src="./img/Videos/Bloquea.gif" alt="BCS Verify®">
       <div class="BoxIntro">  
-        <h2>¿Cómo bloquear tu tarjeta?</h2>
-        <p>Si tienes problemas con tu tarjeta o has sufrido cualquier tipo de robo o estafa, podrás proceder a bloquear tu tarjeta llenando tus datos y dando click en Bloquear Tarjeta. Al terminar, le llegará a su correo la confirmación del bloqueo de Tarjeta.</p><hr><br>
+        <h2>¿Cómo bloquear su tarjeta?</h2>
+        <p>Si tiene problemas con su tarjeta o ha sufrido cualquier tipo de robo u estafa, podrá proceder a bloquearla llenando tus datos y dando click en "Bloquear". Al terminar, le llegará a su correo la confirmación del bloqueo de Tarjeta donde deverá dar nuevamente click para confirmar su identidad y finiquitar el bloqueo.</p><hr><br>
+      </div>
+      <div class="boxFormularioBloquear" id="BoxFormularioBloquear" >
+        <img src="./img/Decorativas/Usuarios Bloqueando Tarjeta.jpg" alt="BCS Verify®">
+        <form action="" class="formularioBloquear" id="FormularioBloquear">
+          <div class="grupo">
+            <label for="InputNumero">Número de Tarjeta</label>
+            <input type="text" name="" class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off">
+          </div>
+
+          <div class="grupo">
+            <label for="InputNombre">Nombre y Apellido</label>
+            <input type="text" id="InputNombre" maxlength="40" autocomplete="off">
+          </div>
+
+          <div class="grupo">
+            <label for="InputCorreo">Correo Electrónico</label>
+            <input type="text" id="InputCorreo" maxlength="30" autocomplete="off">
+          </div>
+          <button type="submit"  id="Bloquear" class="bloquear">Bloquear</button>
+        </form>
       </div>
     </section>
 
