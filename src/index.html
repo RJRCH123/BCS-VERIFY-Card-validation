@@ -10,7 +10,7 @@
   <body>
     <!-- Barra de Navegación -->
     <header>
-      <button class="BoxNavs" onclick="openPage('Inicio', this,'rgb(10 40 65)')" id="defaultOpen">SOBRE NOSOTROS</button>
+      <button class="BoxNavs" onclick="openPage('Inicio', this,'rgb(10 40 65)')" id="AbrirPorDefecto">SOBRE NOSOTROS</button>
       <button class="BoxNavs" onclick="openPage('ValidarTarjeta', this,'rgb(10 40 65)')" >VALIDAR TARJETA</button>
       <button class="BoxNavs" onclick="openPage('BloquearTarjeta', this,'rgb(10 40 65)')">BLOQUEAR TARJETA</button>
       <button class="BoxNavs" onclick="openPage('Contactanos', this, 'rgb(48 129 129)')">CONTÁCTANOS</button>
@@ -48,7 +48,7 @@
     <section id="ValidarTarjeta" class="Box">
       <img class="GifNav" src="./img/Videos/Valida.gif" alt="BCS Verify®">
       <div class="BoxIntro">
-        <h2>¿Cómo validar tu tarjeta?</h2>
+        <h2>¿Cómo validar su tarjeta?</h2>
         <p>A continuación llene los datos correspondientes para confirmar si su tarjeta está vigente aún. Si aparece como inválida, significa que ya está bloqueada.<strong> PRECAUCIÓN:</strong> Debido a tener los datos expuestos en pantalla podrá esconderla, tantas veces sea necesaria, solamente deberá dar click al botón circular.</p><hr>
       </div><br><br>
 
@@ -117,7 +117,7 @@
 
           <div class="grupo">
             <label for="InputNumero">Número de Tarjeta</label>
-            <input type="text" name="" class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off">
+            <input type="text"  class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off">
           </div>
 
           <div class="grupo">
@@ -149,7 +149,7 @@
             </div>
           </div>
           <!-- Botón Verificar Validación -->
-          <button type="submit"  id="Verificar" class="verificar">Verificar</button>
+          <button type="submit"  id="Verificar" class="verificar" onclick="ContenidoInputTarjetaB()" >Verificar</button>
 
           <!-- <button  type="reset" id="NuevaVerificacion" style="display: none">Nueva validación</button> -->
 
@@ -169,19 +169,19 @@
         <form action="" class="formularioBloquear" id="FormularioBloquear">
           <div class="grupo">
             <label for="InputNumero">Número de Tarjeta</label>
-            <input type="text" name="" class="InputNumero" id="InputNumeroB" maxlength="19" autocomplete="off">
+            <input type="text" name="InputsB" class="InputNumero" id="InputNumeroB" maxlength="19" autocomplete="off">
           </div>
 
           <div class="grupo">
             <label for="InputNombre">Nombre y Apellido</label>
-            <input type="text" id="InputNombre" maxlength="40" autocomplete="off">
+            <input type="text" name="InputsB" id="InputNombre" maxlength="40" autocomplete="off">
           </div>
 
           <div class="grupo">
             <label for="InputCorreo">Correo Electrónico</label>
-            <input type="text" id="InputCorreo" maxlength="30" autocomplete="off">
+            <input type="text" name="InputsB" id="InputCorreo" maxlength="30" autocomplete="off">
           </div>
-          <button type="submit"  id="Bloquear" class="bloquear">Bloquear</button>
+          <button type="submit"  id="Bloquear" class="bloquear" onclick="ContenidoInputTarjetaB()">Bloquear</button>
         </form>
       </div>
     </section>
@@ -221,8 +221,43 @@
         elmnt.style.backgroundColor = color;
       }
       
-      // Obtenga el elemento con id = "defaultOpen" y haga clic en él
-      document.getElementById("defaultOpen").click();
+      // Obtenga el elemento con id = "AbrirPorDefecto" y haga clic en él
+      document.getElementById("AbrirPorDefecto").click();
+
+      // Alerta para el input número de Tarjeta de la pag. Verificar
+
+      // function ContenidoInputTarjeta(){
+      //   let Contenido = document.getElementById("InputNumero").value;
+      //   if(Contenido === ""){
+      //   alert("El campo del número de Tarjeta es obligatorio.");
+      //   return false;
+      //   }
+      //   if (Contenido.length < 14){
+      //   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
+      //   return false;
+      //   }
+      // }
+
+      // // Alerta para el input número de Tarjeta de la pag. Bloquear
+      // function ContenidoInputTarjetaB(){
+      //   let ContenidoN = document.getElementById("InputNumero").value;
+      //   let ContenidoF = document.getElementsByTagName("InputsB").value;
+      //   if(ContenidoF === " "){
+      //   alert("No procede, no ha completado el formulario.");
+      //   return false;
+      //   }
+
+      //   if ( 0 < ContenidoN.length < 14){
+      //   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
+      //   return false;
+      //   }
+
+      //   if ( ContenidoN.length === " "){
+      //   alert("No procede, no ha completado el formulario.");
+      //   return false;
+      //   }
+      // }
+
     </script>
     <script src="index.js" type="module"></script>
   </body>

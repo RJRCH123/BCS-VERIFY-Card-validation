@@ -1,8 +1,5 @@
 
-// Obtenga el elemento con id = "defaultOpen" y haga clic en él
-document.getElementById("defaultOpen").click();
-
-//Declaramos variables para la Tarjeta y Formulario
+//Declarar variables para la Tarjeta y Formulario
 const Tarjeta = document.querySelector('#Tarjeta'),
   abrirFormulario = document.querySelector('#AbrirFormulario'),
   formulario = document.querySelector('#Formulario'),
@@ -16,13 +13,13 @@ const Tarjeta = document.querySelector('#Tarjeta'),
   formularioBloquear = document.querySelector('#FormularioBloquear');
 
 
-// Voltear la Tarjeta para mostrarse adelante de forma automática
+// Voltear la Tarjeta para mostrarse adelante de forma automática dependiendo de qué se esté llenando en el formulario.
 const mostrarAdelante = () => {
   if(Tarjeta.classList.contains('active')){
     Tarjeta.classList.remove('active');
   }
 }
-// Rotación de la Tarjeta
+// Rotación de la Tarjeta. Agregar la clase active para que la tarjeta gire.
 Tarjeta.addEventListener('click', () => {
   Tarjeta.classList.toggle('active');
 });
@@ -50,7 +47,9 @@ for(let i = AnioActual; i <= AnioActual + 11; i++){
   formulario.SeleccionarAnio.appendChild(opcion);
 }
 
+
 //Input del Numero de Tarjeta para la página Validar
+
 
 formulario.InputNumero.addEventListener('keyup', (e) => {
   let valorInput = e.target.value;
@@ -69,7 +68,7 @@ formulario.InputNumero.addEventListener('keyup', (e) => {
 		TipoMarca.innerHTML = '';
 	}
 
-  // Reconocer si es Visa, MasterCard, AmericanExpress
+  // Reconocer si es Visa, MasterCard, DinersClub o AmericanExpress
 	if(valorInput[0] == 4){
 		TipoMarca.innerHTML = '';
 		const imagen = document.createElement('img');
@@ -128,7 +127,7 @@ formulario.SeleccionarAnio.addEventListener('change', (e) => {
 	mostrarAdelante();
 });
 
-// * CCV
+// CCV
 formulario.InputCCV.addEventListener('keyup', () => {
 	if(!Tarjeta.classList.contains('active')){
 		Tarjeta.classList.toggle('active');
@@ -163,7 +162,7 @@ formularioBloquear.InputNombre.addEventListener('keyup', (e) => {
 	formularioBloquear.InputNombre.value = valorInput.replace(/[0-9]/g, '');
 });
 
-// IMPORTACIÓN DEL CÓDIGO ISVALID Y MASKIFY 
+        // IMPORTACIÓN DEL CÓDIGO ISVALID Y MASKIFY 
 
 // PARA LA PAGINA VALIDAR
 
@@ -178,15 +177,15 @@ botonValidar.addEventListener('click', () => {
     //console.log(resultValidator);
 
     // if (resultValidator === true) {
-    //     alert('Tarjeta valida');
+    //     alert('Tarjeta válida');
     // }else{
-    //     alert('Tarjeta invalida')
+    //     alert('Tarjeta inválida')
     // }
 
     let maskNumero = validator.maskify(NumeroDeTarjeta.replace(/\s/g, ''));
     //console.log(maskNumero);
 
-    resultValidator === true?alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA'+ ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.'):alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.');
+    resultValidator === true?alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA'+ ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.'):alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'Cualquier duda puede comunicarse con nosotros.');
 
 });
 
@@ -211,7 +210,7 @@ botonBloquear.addEventListener('click', () => {
     let maskNumero = validator.maskify(NumeroDeTarjeta.replace(/\s/g, ''));
     //console.log(maskNumero);
 
-    resultValidator === true?alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad fue enviada.'):alert('Tu número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad no fue enviada');
+    resultValidator === true?alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad para bloquear fue enviada. Revise su correo.'):alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad para bloquear no fue enviada'); 
 
 });
 
