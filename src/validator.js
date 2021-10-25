@@ -1,14 +1,17 @@
+/* eslint-disable no-console */
 const validator = {
   isvalid: (NumeroDeTarjeta) => {
     
     let ObtNumTarjeta = NumeroDeTarjeta; // Obtenemos el número de la tarjeta
-    //console.log(ObtNumTarjeta);
+    // eslint-disable-next-line no-console
+    console.log(ObtNumTarjeta);
 
     let stringNumeroDeTarjeta = ObtNumTarjeta.split(""); // Obtnemos el número en una cadena y en reversa
-    //console.log(stringNumeroDeTarjeta);
+    console.log(stringNumeroDeTarjeta);
 
-    // let reverseNumeroDeTarjeta = stringNumeroDeTarjeta.reverse(); // Obtenemos el número en reversa
-    // console.log(reverseNumeroDeTarjeta);
+    // eslint-disable-next-line no-unused-vars
+    let reverseNumeroDeTarjeta = stringNumeroDeTarjeta.reverse(); // Obtenemos el número en reversa
+    console.log(reverseNumeroDeTarjeta);
 
     let parNumero = [];
     let doubleNumero = [];
@@ -41,7 +44,7 @@ const validator = {
       sumNumero += parseInt(finalNumero[index], 10);
     }
 
-    //console.log(sumNumero);
+    console.log(sumNumero);
 
     if (sumNumero % 10 === 0) {
       return true;
@@ -49,7 +52,8 @@ const validator = {
       return false;
     }
 
-    //console.log(parNumero);
+    // eslint-disable-next-line no-unreachable
+    console.log(parNumero);
   },
 
   maskify: (NumeroDeTarjeta) => {
@@ -64,7 +68,7 @@ const validator = {
         mask += NumeroDeTarjeta[i];
       }
     }
-    //console.log(mask);
+    console.log(mask);
     return mask;
   }
 };
