@@ -1,434 +1,236 @@
-# Tarjeta de crédito válida
 
-## Índice
+## ÍNDICE
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+* [1. BCS Verify®](#1-bcs-verify-® )
+* [2. Historia de Usuario](#2-historia-de-usuario)
+* [3. Realización del Diseño](#3-realizacion-del-proyecto)
+* [4. Tecnologías empleadas](#4-tecnologias-empleadas)
+* [5. Fuentes](#5-fuentes)
+* [6. Autores](#6-autores)
+
+
+***
+# 🔒 BCS Verify ® 
+
+**Bank Card Security Verify®**, es una idea de proyecto que busca enfocarse en ayudar a los usuarios con cualquier tipo de tarjeta de crédito o débito en prevenir estafas o robos desde cualquier ordenador o dispositivo móvil. 
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Logos/LogoNav.jpg" width="300" >
+</div>
 
 ***
 
-## 1. Preámbulo
+## Historia de Usuario
+### Segmentación de clientes 🕵🏼
+Dirigido a todas las personas que tengan a su nombre una Tarjeta de Crédito o Débito con bancos afiliados con las siguientes redes globales de tecnología que garantizan que puedas usar tu tarjeta de crédito o de débito en otros países:
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/AmericanEx.png" width="80">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/MasterCard.png" width="80">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/Diners-Club.png" width="80">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/VisaColor.png" width="80">
+</div> 
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
+### ¿Qué servicios brinda al usuario? 👩🏽‍💼
 
-![gráfica de algoritmo de Luhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
+BCS Verify®, mediante su página web nos brinda lo siguiente:
 
-## 2. Resumen del proyecto
+- **Página de información:** Da la bienvenida y explica sobre la compañía, los afiliados y métodos de seguridad. 
+- **Página para la Validación:** Muestra instrucciones de cómo validar una tarjeta mediante la página web. Además, brinda un formulario para hacerlo.
+- **Página para Bloquear:** Muestra instrucciones de cómo bloquear una tarjeta mediante la página web, Además, brinda un formulario para hacerlo.
+- **Página de contácto:** Cuenta con la información completa de cómo, cuándo y los medios en los cuales puede comunicarse el usuario con la compañía. 
+### ¿Qué soluciones aporta al usuario? 👨🏽‍🏫
+- En caso sufra un robo o sospecha de alguna estafa y no cuente con el tiempo de acudir a la larga espera ⏳ en una fila o una llamada telefónica al banco, podrá acceder desde cualquier ordenador o dispotisitivo móvil en cualquier parte del mundo 🌎 y llenar los formularios correspondientes para **bloquear** 🚫 o **validar**✔️ su tarjeta de crédito. 💳
+- Cuenta con una **amplia lista de redes sociales** 📲en las cuales puede comunicarse el usuario en caso de dudas.
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Redes%20Sociales/icons8-whatsapp-96.png" width="70">
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Redes%20Sociales/icons8-facebook-144.png" width="70">
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Redes%20Sociales/icons8-instagram-144.png" width="70">
 
-Trabajando en parejas aprenderán a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Redes%20Sociales/icons8-twitter-144.png" width="70">
+</div>
 
-## 3. Objetivos de aprendizaje
+- También, cuenta con una línea 📞 totalmente gratuita las **24 horas** al día los **365  dias** del año para poder consultar cualquier duda. 
 
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
+***
+## Realización del Proyecto
 
-### HTML
+## Diseño 📱
+Para la realización del diseño, pasamos por las siguientes fases: 
+### 1. Prototipado de Baja Fidelidad: 📝
+Consiste en realizar un esquema de la página web, a groso modo, mediante una hoja de papel. 
 
-- [ ] **Uso de HTML semántico**
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Baja%20Fidelidad/PrototipoBF.png" width="800">
+</div>
 
-  <details><summary>Links</summary><p>
+### 2. Flowchart: 🤷🏼‍♀️
+Al definir qué páginas contendrá la plataforma Web, se realizará un mapa semántico y un diagrama de flujo.
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg" width="800">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part2.jpg" width="800">
+</div>
 
-### CSS
+### 3. Wirefrime: 🙋🏼
+Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma.
 
-- [ ] **Uso de selectores de CSS**
+<div align="center">
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes2.png?raw=true" width="800">
 
-  <details><summary>Links</summary><p>
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes3.png?raw=true" width="800">
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes4.png?raw=true" width="800">
 
-- [ ] **Modelo de caja (box model): borde, margen, padding**
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes5.png?raw=true" width="800">
 
-  <details><summary>Links</summary><p>
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes6.png?raw=true" width="800">
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes7.png?raw=true" width="800">
 
-### Web APIs
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes8.png?raw=true" width="800">
+</div>
 
-- [ ] **Uso de selectores del DOM**
+### 4. Prototipado de Alta Fidelidad: 💁🏼
+Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores, entre otros recursos.
 
-  <details><summary>Links</summary><p>
+<div>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF2.png"  width="800">
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF3.png"  width="800">
 
-- [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF4.png"  width="800">
 
-  <details><summary>Links</summary><p>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF5.png"  width="800">
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF6.png"  width="800">
 
-- [ ] **Manipulación dinámica del DOM**
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF7.png"  width="800">
 
-  <details><summary>Links</summary><p>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF8.png"  width="800">
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF9.png"  width="800">
 
-### JavaScript
+<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF10.png"  width="800">
 
-- [ ] **Tipos de datos primitivos**
+</div>
 
-  <details><summary>Links</summary><p>
+### 5. Mockup: 🧑🏾‍💻
+Y, por último, se visualiza el cómo se vería la página web en un dispositivo.
 
-  * [Valores primitivos - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures#valores_primitivos)
-</p></details>
-
-- [ ] **Strings (cadenas de caracteres)**
-
-  <details><summary>Links</summary><p>
-
-  * [Strings](https://curriculum.laboratoria.la/es/topics/javascript/06-strings)
-  * [String — Cadena de caracteres - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
-</p></details>
-
-- [ ] **Variables (declaración, asignación, ámbito)**
-
-  <details><summary>Links</summary><p>
-
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
-
-- [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-  <details><summary>Links</summary><p>
-
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
-
-- [ ] **Uso de bucles/ciclos (while, for, for..of)**
-
-  <details><summary>Links</summary><p>
-
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
-
-- [ ] **Funciones (params, args, return)**
-
-  <details><summary>Links</summary><p>
-
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
-
-- [ ] **Pruebas unitarias (unit tests)**
-
-  <details><summary>Links</summary><p>
-
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
-
-- [ ] **Módulos de ECMAScript (ES Modules)**
-
-  <details><summary>Links</summary><p>
-
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
-
-- [ ] **Uso de linter (ESLINT)**
-
-- [ ] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-### Control de Versiones (Git y GitHub)
-
-- [ ] **Git: Instalación y configuración**
-
-- [ ] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-  <details><summary>Links</summary><p>
-
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
-
-### UX (User eXperience)
-
-- [ ] **Diseñar la aplicación pensando en y entendiendo al usuario**
-
-- [ ] **Crear prototipos para obtener feedback e iterar**
-
-- [ ] **Aplicar los principios de diseño visual (contraste, alineación, jerarquía)**
-
-## 4. Consideraciones generales
-
-* El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
-  sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
-  te preocupes, lo aprenderás durante este proyecto.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Usa solo caracteres numéricos (dígitos) en la tarjeta a validar [0-9].
-
-### Definición del producto
-
-En el `README.md`, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
-
-### Interfaz de usuario (UI)
-
-La interfaz debe permitir al usuario:
-
-* Insertar el número que queremos validar.
-* Ver el resultado si es válido o no.
-* Ocultar todos los dígitos de su número de tarjeta menos los últimos
-4 caracteres.
-* No debe poder ingresar un campo vacío.
-
-### UX (Diseño de experiencia de usuario)
-
-Antes de iniciar a codear, debes entender el problema que quieres solucionar y
-cómo tu aplicación lo soluciona.
-
-* Trabaja tu primer prototipo con papel y lápiz (blanco y negro).
-* Luego valida esta solución con una compañera (pedir feedback).
-* Toma lo aprendido al momento de validar tu primer prototipo y desarrolla un
-  nuevo prototipo usando alguna herramienta para diseño de prototipos
-  ([Balsamiq](https://balsamiq.com/), [Figma](https://www.figma.com/),
-  [Google Slides](https://www.google.com/intl/es/slides/about/), etc.)
-Estos puntos los presentarás en el `README.md`.
-
-### Scripts / Archivos
-
-#### General
-
-##### `README.md`
-
-Debe contener lo siguiente:
-
-* Un título con el nombre de tu proyecto.
-* Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
-* La imagen final de tu proyecto.
-* Investigación UX:
-  1. Explicar quiénes son los usuarios y los objetivos en relación con el
-    producto.
-  2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
-    usuarios.
-  3. Luego colocarás la foto de tu primer prototipo en papel.
-  4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
-  5. Imagen del prototipo final.
-
-#### Visualmente (HTML y CSS)
-
-Deberás maquetar de forma exacta el prototipo final que hiciste en la herramienta
-de diseño de prototipos que escogiste utilizando HTML y CSS. En este momento elegirás
-los colores, tipo de fuente, etc a usar.
-
-A continuación describimos los archivos que utilizarás:
-
-##### `src/index.html`
-
-En este archivo va el contenido que se mostrará al usuario (esqueleto HTML).
-Encontrarás 3 etiquetas iniciales, las cuales si deseas puedes borrar y empezar
-de cero:
-
-* `<header>`: encabezado de tu proyecto.
-* `<main>`: contenido principal de tu proyecto.
-* `<footer>`: pie de página de tu proyecto.
-
-##### `src/style.css`
-
-Este archivo debe contener las reglas de estilo. Queremos que escribas tus
-propias reglas, por eso NO está permitido el uso de frameworks de CSS
-(Bootstrap, materialize, etc).
-
-#### Funcionalmente (JavaScript - pruebas unitarias)
-
-* La lógica del proyecto debe estar implementada completamente en JavaScript.
-* En este proyecto NO está permitido usar librerías o frameworks, solo
-  JavaScript puro también conocido como Vanilla JavaScript.
-
-Vas a tener 2 archivos JavaScript separando responsabilidades, a continuación
-indicamos qué harás en cada archivo:
-
-##### `src/validator.js`
-
-Acá escribirás las funciones necesarias para que el usuario pueda verificar la
-tarjeta de crédito y ocultar los dígitos de su número de tarjeta.
-Esta función debe ser pura e independiente del DOM.
-
-Para esto debes implementar el **objeto `validator`**, el cual ya se encuentra
-_exportado_ en el _boilerplate_. Este objeto (`validator`) contiene
-dos métodos (`isValid` y `maskify`):
-
-* **`validator.isValid(creditCardNumber)`**: `creditCardNumber` es un `string`
-con el número de tarjeta que se va a verificar. Esta función debe retornar un
-`boolean` dependiendo si es válida de acuerdo al [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn).
-
-* **`validator.maskify(creditCardNumber)`**: `creditCardNumber` es un `string` con
-el número de tarjeta y esta función debe retornar un `string` donde todos menos
-los últimos cuatro caracteres sean reemplazados por un numeral (`#`) o 🐱.
-Esta función deberá siempre mantener los últimos cuatro caracteres intactos, aún
-cuando el `string` sea de menor longitud.
-
-    Ejemplo de uso
-
-    ```js
-    maskify('4556364607935616') === '############5616'
-    maskify(     '64607935616') ===      '#######5616'
-    maskify(               '1') ===                '1'
-    maskify(               '')  ===                ''
-    ```
-
-##### `src/index.js`
-
-Acá escribirás todo el código que tenga que ver con la interacción del DOM
-(seleccionar, actualizar y manipular elementos del DOM y eventos).
-Es decir, en este archivo deberás invocar las funciones `isValid` y `maskify`
-según sea necesario para actualizar el resultado en la pantalla (UI).
-
-##### `test/validator.spec.js`
-
-En este archivo tendrás que completar las pruebas unitarias de las funciones
-`validator.isValid(creditCardNumber)` y `validator.maskify(creditCardNumber)`
-implementadas en `validator.js` utilizando [Jest](https://jestjs.io/es-ES/).
-Tus pruebas unitarias deben dar un 70% en _coverage_ (cobertura),
-_statements_ (sentencias), _functions_ (funciones) y _lines_ (líneas); y un
-mínimo del 50% de _branches_ (ramas).
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Mockups/Mockup.png" width="800">
+</div>
 
 ***
 
-## 6. Pistas, tips y lecturas complementarias
+## Tecnologías empleadas 👩🏾‍💻 
 
-### Primeros pasos
+-   [HTML:](https://developer.mozilla.org/es/docs/Web/HTML)  Siguiendo las reglas del HTML semántico se estructuró con un  `header`  que contiene una barra de navegación, el  `main`  para englobar el contenido principal y en el  `footer`  se detalla los derechos de autor.
+    
+-   [CSS:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+-   [Jest:](https://jestjs.io/docs/es-ES/getting-started)  Framework para realizar los testing unitarios.
+    
+-   [Eslint:](https://jestjs.io/docs/es-ES/getting-started)  Herramienta de linting para analizar el código en busca de errores.
+    
+-   [Javascript:](https://developer.mozilla.org/es/docs/Web/JavaScript)  Para dar la funcionalidad a la aplicación en donde se utilizó lo siguiente:
 
-1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
-   condiciones, algo como [Atom](https://atom.io/) o
-   [Code](https://code.visualstudio.com/).
-2. Para ejecutar los comandos a continuación necesitarás una :shell:
-   [UNIX Shell](https://curriculum.laboratoria.la/es/topics/shell),
-   que es un programita que interpreta líneas de comando (command-line
-   interpreter) así como tener [git](https://curriculum.laboratoria.la/es/topics/scm/01-git)
-   instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
-   ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
-   también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
-   que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows
-   10 o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-   [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-   en ese repo. La otra integrante del equipo deber hacer un fork **del
-   repositorio de su compañera** y
-   [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-   hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu *fork* a tu computadora (copia local).
-5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-   asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-   pruebas unitarias (unit tests) con el comando `npm test`.
-7. Para ver la interfaz de tu programa en el navegador, usa el comando
-   `npm start` para arrancar el servidor web y dirígete a
-   `http://localhost:5000` en tu navegador.
-8. A codear se ha dicho! :rocket:
+            📌 NOTA:¿Qué es una sentencia en JavaScript?
 
-### Recursos y temas relacionados
+           ➔ Las aplicaciones JavaScript se componen de sentencias con una sintaxis propia.
 
-A continuación un video de Michelle que te lleva a través del algoritmo de Luhn
-y un par de cosas más que debes saber para resolver este proyecto. ¡Escúchala
-con detenimiento y sigue sus consejos! :)
+           ➔ Una sentencia  puede estar formada por múltiples líneas. 
 
-[![tips credit card](https://img.youtube.com/vi/f0zL6Ot9y_w/0.jpg)](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
+           ➔ Puede haber varias sentencias en una sola línea si separamos cada una de las sentencias por un punto y coma. No es una palabra clave, sino un grupo de palabras clave.
 
-[Link](https://www.youtube.com/watch?v=f0zL6Ot9y_w)
 
-También una metodología para empezar a desarrollar tareas con JavaScript:
+#### Funciones creadas:
 
-[![Resolución de problemas con JavaScript](http://i3.ytimg.com/vi/lYfEmhLmu7A/hqdefault.jpg)](https://www.youtube.com/watch?v=lYfEmhLmu7A)
+> -   `mostrarAdelante()`  Para que la la imagen de la Tarjeta se de vuelta.
+> -   `function validateForm()`  Para validar que los caracteres introducidos por el usuario sean exclusivamente números.
+> -   `function disabledBtn()`  Para deshabilitar el botón y que el usuario instroduzca los datos correctamente.
+> -   `isValid()`  Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
+> -   `maskify()`  Para ocultar los números de la tarjeta a excepción de los últimos 4 números.
 
-[Link](https://www.youtube.com/watch?v=lYfEmhLmu7A)
+#### Métodos:
+> - `AddEventListener() `Toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito. Se utiliza para agregar un controlador de eventos a un elemento especificado. 
+> - `toggle() `Se usa en casos para ocultar y mostrar elementos de una página web.
+> - `createElement() `Se trata de pasarle el nombre de la etiqueta tag a utilizar.
+> - `appendChild() `Inserta un nuevo nodo dentro de la estructura DOM de un documento, y es la segunda parte del proceso central uno-dos, crear-y-añadir para construir páginas web.
+> - `querySelector() `Devuelve el primer elemento del documento (utilizando un recorrido primero en profundidad pre ordenado de los nodos del documento) que coincida con el grupo especificado de selectores.
+> - `contains() `Devuelve un valor Boolean indicando si un nodo es descendiente de un nodo dado o no.
+> - `remove() `Eliminar los objetos y el contenido que contengan dentro de lo mismos (nodos hijos), el contenido y el elemento borrado nunca se eliminará físicamente del HTML si no dinámicamente del DOM.
+> - `getElementById() ` Permite, como su nombre indica, seleccionar un elemento del documento por medio del valor del atributo id que se le haya asignado.
+>-  `split() `Sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los “trozos”. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
+>-  `reverse() `Invierte el orden de los elementos de un array in place. El primer elemento pasa a ser el último y el último pasa a ser el primero.
+>-  `log() `Muestra un mensaje en la **consola** web (o del intérprete JavaScript).
+> - `push() `Añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
+>-  `toString() `Comprueba su primer argumento, e intenta devolver una cadena de representación en la base especificada.
+>-  `join () `Se utiliza para convertir todos los elementos en la matriz en una cadena. Los elementos se designan por el delimitador separado.
+>-  `.split `Sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los “trozos”. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
+>-  `concat() `Se usa para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.
+>-  `parseInt() `Comprueba el primer argumento, una cadena, e intenta devolver un entero de la base especificada. Por ejemplo, una base de 10 indica una conversión a número decimal, 8 octal, 16 hexadecimal, y así sucesivamente.
+>- `replace() `Ejecuta una búsqueda por una coincidencia en una cadena y reemplaza la subcadena coincidente con una subcadena de reemplazo.
+>- `getFullYear() ` devuelve el año de la fecha indicada acorde a la hora local.
+>- `trim()` Elimina el ultimo espaciado.
 
-Terminal y shell de UNIX:
+#### Objetos:
 
-[![Playlist de Terminal y shell de UNIX](https://img.youtube.com/vi/GB35Eyb-J4c/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
+>-  `Console `Provee acceso a la consola de depuración de los navegadores
+>-  `Date `Proporciona un comportamiento uniforme entre plataformas. El objeto **Date** soporta métodos UTC (universales), además de métodos horarios locales. UTC, también conocido como Greenwich Mean Time (GMT), se refiere a la hora según el Estádar Horario Mundial (World Time Standard).
 
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
+#### Expresiones regulares:
 
-Control de versiones y trabajo colaborativo con Git y GitHub:
+> -   `(/\s/g, '') `  Para eliminamos espacios en blanco.
+> -   `(/\D/g, '') `  Para eliminar las letras.
+> -   `(/([0-9]{4})/g, '$1 ') ` Para agrupar en 4 y agregar un espacio.
+> -   `(/([0-9]{4})/g, '$1 ') ` Para agrupar en 4 y agregar un espacio.
 
-[![Playlist de control de versiones y trabajo colaborativo](https://img.youtube.com/vi/F1EoBbvhaqU/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
+#### Declaradores:
 
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
+>-  `let `Definimos variable con block scope, las variables declaradas de esta manera nos genera un error de referencia cuando intentamos utilizar hoisting.
+>-  `const `Definimos variables de sólo lectura (no confundir con inmutables), esto quiere decir que, cuando asignamos una variable, el nombre de esta va estar asignada a un puntero en memoria, el cual no puede ser sobreescrito o reasignado.
+>-  `var `Definimos una variable con local scope, también nos permite utilizar un comportamiento llamado [hoisting](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting), sin generar ningún error.
+>-  `export `La declaración **export** se utiliza al crear módulos de **JavaScript** para exportar funciones, objetos o tipos de dato primitivos del módulo para que puedan ser utilizados por otros programas con la sentencia import .
+>-  `import `Se usa para importar funciones que han sido exportadas desde un módulo externo.
+>-  `this `This es una referencia que se crea cuando una función es invocada, no declarada. El valor de esa referencia depende al 100% del lugar en la que esa invocación se realice, llamado call-site. Ese lugar de llamada es la invocación en sí a la función.
+>-  `if... else  `Ejecuta una sentencia si una condición especificada es true. Si la condición es false, otra sentencia puede ser ejecutada.
+>-  `while() `Crea un bucle que ejecuta la instrucción especificada siempre que la condición de prueba se evalúe como verdadera. La condición se evalúa antes de ejecutar la instrucción.
+>-  `for() `Un ciclo for se repite hasta que una condición especificada se evalúe como false .
 
-Diseño de experiencia de usuario (User Experience Design):
+#### Instruccionadores:
 
-* Ideación
-* Prototipado (sketching)
-* Testeo e Iteración
+>-  `return `Una instrucción **return** termina la ejecución **de** una función y devuelve el control a la función **de** llamada. La ejecución se reanuda en la función **de** llamada, en el punto que sigue inmediatamente a la llamada. Una instrucción **return** puede devolver un valor a la función **de** llamada.
+#### Operadores:
 
-Desarrollo Front-end:
+| Nombre | Operador abreviado | Significado |
+|--|--|--|
+| Asignación | `x = y` | `x = y` |
+| Asignación de adición | `x += y` | `x = x + y` |
+| Igual | `==` | Devuelve true si los operandos son iguales. |
+| No es igual | `!=` | Devuelve true si los operandos no son iguales. |
+| Estrictamente igual | `===` | Devuelve true si los operandos son iguales y del mismo tipo. Consulta también Object.is y similitud en JS. |
+| Mayor o igual que | `>=` | Devuelve true si el operando izquierdo es mayor o igual que el operando derecho. |
+| Menor o igual | `<=` | Devuelve true si el operando izquierdo es menor o igual que el operando derecho. |
+| Residuo | `%` | Operador binario. Devuelve el resto entero de dividir los dos operandos. |
+| Incremento | `++` | Operador unario. Agrega uno a su operando. Si se usa como operador prefijo (++x), devuelve el valor de su operando después de agregar uno; si se usa como operador sufijo (x++), devuelve el valor de su operando antes de agregar uno. |
+| Decremento | `--` | Operador unario. Resta uno de su operando. El valor de retorno es análogo al del operador de incremento. |
+| AND a nivel de bits | `	a & b` | Devuelve un uno en cada posición del bit para los que los bits correspondientes de ambos operandos son unos. |
+| OR a nivel de bits | `a | b` | Devuelve un cero en cada posición de bit para el cual los bits correspondientes de ambos operandos son ceros. |
+| AND Lógico | `&&` | Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false. |
+| OR lógico | `||` | Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false. |
+| NOT lógico | `!` | Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true. |
+| operador condicional | `condition ? val1 : val2` | Si condition es true, el operador tiene el valor de val1. De lo contrario, tiene el valor de val2. Puedes utilizar el operador condicional en cualquier lugar donde normalmente utilizas un operador estándar. |
+| operador coma | `,` | simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle for, para permitir que se actualicen múltiples variables cada vez a través del bucle. |
+| operador new | `new` | permite crear un objeto de cualquier tipo, incluyendo tipos definidos por el usuario, y devuelve un puntero (del tipo adecuado) al objeto creado. |
+| Operadores de tipo miembro | `.` `[]`| Indican |
+| Operadores condicionales | `?:` | condicional |
 
-* Valores
-* Tipos
-* Variables
-* Control de flujo
-* Tests unitarios
-* [Documentación de NPM](https://docs.npmjs.com/)
+***
+## Fuentes 📚
+- [Repositorio de Laboratoria:](https://github.com/Laboratoria/LIM016-card-validation) Se encuentran todas las condiciones y herramientas a trabajar para el proyecto.
 
-Organización del Trabajo:
-
-* [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
-* [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
-  esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
-  poco a lo largo del -_bootcamp_.
-* [Blog: cómo funciona el algoritmo de Luhn](http://www.quobit.mx/asi-funciona-el-algoritmo-de-luhn-para-generar-numeros-de-tarjetas-de-credito.html).
+## Autores 📍
+- Rosamaria Janeth Rodriguez 
+- Equipo de Laboratoria
