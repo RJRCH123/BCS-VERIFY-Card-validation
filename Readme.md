@@ -148,7 +148,6 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 #### Funciones creadas:
 
 > -   `mostrarAdelante()`  Para que la la imagen de la Tarjeta se de vuelta.
-> -   `function validateForm()`  Para validar que los caracteres introducidos por el usuario sean exclusivamente números.
 > -   `function disabledBtn()`  Para deshabilitar el botón y que el usuario instroduzca los datos correctamente.
 > -   `isValid()`  Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
 > -   `maskify()`  Para ocultar los números de la tarjeta a excepción de los últimos 4 números.
@@ -217,9 +216,7 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 | Incremento | `++` | Operador unario. Agrega uno a su operando. Si se usa como operador prefijo (++x), devuelve el valor de su operando después de agregar uno; si se usa como operador sufijo (x++), devuelve el valor de su operando antes de agregar uno. |
 | Decremento | `--` | Operador unario. Resta uno de su operando. El valor de retorno es análogo al del operador de incremento. |
 | AND a nivel de bits | `	a & b` | Devuelve un uno en cada posición del bit para los que los bits correspondientes de ambos operandos son unos. |
-| OR a nivel de bits | `a | b` | Devuelve un cero en cada posición de bit para el cual los bits correspondientes de ambos operandos son ceros. |
 | AND Lógico | `&&` | Devuelve expr1 si se puede convertir a false; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, && devuelve true si ambos operandos son true; de lo contrario, devuelve false. |
-| OR lógico | `||` | Devuelve expr1 si se puede convertir a true; de lo contrario, devuelve expr2. Por lo tanto, cuando se usa con valores booleanos, || devuelve true si alguno de los operandos es true; si ambos son falsos, devuelve false. |
 | NOT lógico | `!` | Devuelve false si su único operando se puede convertir a true; de lo contrario, devuelve true. |
 | operador condicional | `condition ? val1 : val2` | Si condition es true, el operador tiene el valor de val1. De lo contrario, tiene el valor de val2. Puedes utilizar el operador condicional en cualquier lugar donde normalmente utilizas un operador estándar. |
 | operador coma | `,` | simplemente evalúa ambos operandos y devuelve el valor del último operando. Este operador se utiliza principalmente dentro de un bucle for, para permitir que se actualicen múltiples variables cada vez a través del bucle. |
