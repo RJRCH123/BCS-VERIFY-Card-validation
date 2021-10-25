@@ -14,7 +14,7 @@
 
 **Bank Card Security Verify®**, es una idea de proyecto que busca enfocarse en ayudar a los usuarios con cualquier tipo de tarjeta de crédito o débito en prevenir estafas o robos desde cualquier ordenador o dispositivo móvil. 
 <div align="center">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Logos/LogoNav.jpg" width="300" >
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Logos/LogoNav.jpg" width="500" >
 </div>
 
 ***
@@ -23,10 +23,10 @@
 ### Segmentación de clientes 🕵🏼
 Dirigido a todas las personas que tengan a su nombre una Tarjeta de Crédito o Débito con bancos afiliados con las siguientes redes globales de tecnología que garantizan que puedas usar tu tarjeta de crédito o de débito en otros países:
 <div align="center">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/AmericanEx.png" width="80">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/MasterCard.png" width="80">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/Diners-Club.png" width="80">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/VisaColor.png" width="80">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/AmericanEx.png" width="100">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/MasterCard.png" width="100">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/DinersClub.png" width="100">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img/Tarjeta/VisaColor.png" width="100">
 </div> 
 
 
