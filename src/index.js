@@ -156,10 +156,10 @@ formularioBloquear.InputNumeroB.addEventListener('keyup', (e) => {
 });
 
 // Input nombre de Tarjeta
-formularioBloquear.InputNombre.addEventListener('keyup', (e) => {
+formularioBloquear.InputNombreB.addEventListener('keyup', (e) => {
 	let valorInput = e.target.value;
 
-	formularioBloquear.InputNombre.value = valorInput.replace(/[0-9]/g, '');
+	formularioBloquear.InputNombreB.value = valorInput.replace(/[0-9]/g, '');
 });
 
         // IMPORTACIÓN DEL CÓDIGO ISVALID Y MASKIFY 
