@@ -66,20 +66,13 @@ Consiste en realizar un esquema de la página web, a groso modo, mediante una ho
 </div>
 
 ### 2. Flowchart: 🤷🏼‍♀️
-Al definir qué páginas contendrá la plataforma Web, se realizará un mapa semántico y un diagrama de flujo.
-
-<div align="center">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg" width="800">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part2.jpg" width="800">
-</div>
+Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg).
 
 ### 3. Wireframe: 🙋🏼
 Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma.
 
 <div align="center">
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes2.png?raw=true" width="800">
-
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes3.png?raw=true" width="800">
 
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes4.png?raw=true" width="800">
 
@@ -98,10 +91,6 @@ Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores,
 <div>
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF2.png"  width="800">
 
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF3.png"  width="800">
-
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF4.png"  width="800">
-
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF5.png"  width="800">
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF6.png"  width="800">
@@ -109,8 +98,6 @@ Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores,
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF7.png"  width="800">
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF8.png"  width="800">
-
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF9.png"  width="800">
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF10.png"  width="800">
 
@@ -229,5 +216,5 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 - [Repositorio de Laboratoria:](https://github.com/Laboratoria/LIM016-card-validation) Se encuentran todas las condiciones y herramientas a trabajar para el proyecto.
 
 ## Autores 📍
-- Rosamaria Janeth Rodriguez 
-- Equipo de Laboratoria
+- [Rosamaria Rodriguez](https://github.com/RJRCH123)  
+- Equipo de Laboratoria LIM016
