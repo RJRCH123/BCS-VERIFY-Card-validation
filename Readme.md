@@ -34,10 +34,10 @@ Dirigido a todas las personas que tengan a su nombre una Tarjeta de Crédito o D
 
 BCS Verify®, mediante su página web nos brinda lo siguiente:
 
-- **Página de información:** Da la bienvenida y explica sobre la compañía, los afiliados y métodos de seguridad. 
-- **Página para la Validación:** Muestra instrucciones de cómo validar una tarjeta mediante la página web. Además, brinda un formulario para hacerlo.
-- **Página para Bloquear:** Muestra instrucciones de cómo bloquear una tarjeta mediante la página web, Además, brinda un formulario para hacerlo.
-- **Página de contacto:** Cuenta con la información completa de cómo, cuándo y los medios en los cuales puede comunicarse el usuario con la compañía. 
+- **Página de información 📚:** Da la bienvenida y explica sobre la compañía, los afiliados y métodos de seguridad. 
+- **Página para la Validación ✔️:** Muestra instrucciones de cómo validar una tarjeta mediante la página web. Además, brinda un formulario para hacerlo.
+- **Página para Bloquear 🚫:** Muestra instrucciones de cómo bloquear una tarjeta mediante la página web, Además, brinda un formulario para hacerlo.
+- **Página de contacto 📞:** Cuenta con la información completa de cómo, cuándo y los medios en los cuales puede comunicarse el usuario con la compañía. 
 ### ¿Qué soluciones aporta al usuario? 👨🏽‍🏫
 - En caso sufra un robo o sospecha de alguna estafa y no cuente con el tiempo de acudir a la larga espera ⏳ en una fila o una llamada telefónica al banco, podrá acceder desde cualquier ordenador o dispotisitivo móvil en cualquier parte del mundo 🌎 y llenar los formularios correspondientes para **bloquear** 🚫 o **validar**✔️ su tarjeta de crédito. 💳
 - Cuenta con una **amplia lista de redes sociales** 📲en las cuales puede comunicarse el usuario en caso de dudas.
@@ -78,6 +78,7 @@ A continuación, se mostrará parte del Wireframe; si desea puede verlo completo
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes4.png?raw=true" width="800">
 
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes5.png?raw=true" width="800">
+</div>
 
 ### 4. Prototipado de Alta Fidelidad: 💁🏼
 Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores, entre otros recursos. 
@@ -88,7 +89,6 @@ A continuación, se mostrará parte del Prototipado de Alta Fidelidad, si desea 
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF5.png"  width="800">
 
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF6.png"  width="800">
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF7.png"  width="800">
 
