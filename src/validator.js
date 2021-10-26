@@ -52,8 +52,7 @@ const validator = {
       return false;
     }
 
-    // eslint-disable-next-line no-unreachable
-    console.log(parNumero);
+    
   },
 
   maskify: (NumeroDeTarjeta) => {

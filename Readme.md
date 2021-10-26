@@ -37,7 +37,7 @@ BCS Verify®, mediante su página web nos brinda lo siguiente:
 - **Página de información:** Da la bienvenida y explica sobre la compañía, los afiliados y métodos de seguridad. 
 - **Página para la Validación:** Muestra instrucciones de cómo validar una tarjeta mediante la página web. Además, brinda un formulario para hacerlo.
 - **Página para Bloquear:** Muestra instrucciones de cómo bloquear una tarjeta mediante la página web, Además, brinda un formulario para hacerlo.
-- **Página de contácto:** Cuenta con la información completa de cómo, cuándo y los medios en los cuales puede comunicarse el usuario con la compañía. 
+- **Página de contacto:** Cuenta con la información completa de cómo, cuándo y los medios en los cuales puede comunicarse el usuario con la compañía. 
 ### ¿Qué soluciones aporta al usuario? 👨🏽‍🏫
 - En caso sufra un robo o sospecha de alguna estafa y no cuente con el tiempo de acudir a la larga espera ⏳ en una fila o una llamada telefónica al banco, podrá acceder desde cualquier ordenador o dispotisitivo móvil en cualquier parte del mundo 🌎 y llenar los formularios correspondientes para **bloquear** 🚫 o **validar**✔️ su tarjeta de crédito. 💳
 - Cuenta con una **amplia lista de redes sociales** 📲en las cuales puede comunicarse el usuario en caso de dudas.
@@ -73,7 +73,7 @@ Al definir qué páginas contendrá la plataforma Web, se realizará un mapa sem
 <img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part2.jpg" width="800">
 </div>
 
-### 3. Wirefrime: 🙋🏼
+### 3. Wireframe: 🙋🏼
 Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma.
 
 <div align="center">
