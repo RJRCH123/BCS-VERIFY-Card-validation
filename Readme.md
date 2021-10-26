@@ -69,7 +69,8 @@ Consiste en realizar un esquema de la página web, a groso modo, mediante una ho
 Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg).
 
 ### 3. Wireframe: 🙋🏼
-Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma.
+Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma. 
+A continuación, se mostrará parte del Wireframe; si desea puede verlo completo dando click [Aquí](https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframes.pdf).
 
 <div align="center">
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes2.png?raw=true" width="800">
@@ -78,15 +79,9 @@ Por consiguiente, en esta fase se busca realizar un esquema de distribución a g
 
 <img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes5.png?raw=true" width="800">
 
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes6.png?raw=true" width="800">
-
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes7.png?raw=true" width="800">
-
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Wireframe/Wireframes8.png?raw=true" width="800">
-</div>
-
 ### 4. Prototipado de Alta Fidelidad: 💁🏼
-Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores, entre otros recursos.
+Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores, entre otros recursos. 
+A continuación, se mostrará parte del Prototipado de Alta Fidelidad, si desea puede verlo completo dando click [Aquí](https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/PrototipoAF.pdf).
 
 <div>
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF2.png"  width="800">
@@ -96,10 +91,6 @@ Luego de ya tener el Wirefrime, se diseña en base a estilos, paleta de colores,
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF6.png"  width="800">
 
 <img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF7.png"  width="800">
-
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF8.png"  width="800">
-
-<img  src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Alta%20Fidelidad/PrototipoAF10.png"  width="800">
 
 </div>
 
