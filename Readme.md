@@ -60,7 +60,7 @@ BCS Verify®, mediante su página web nos brinda lo siguiente:
 Para la realización del diseño, pasamos por las siguientes fases: 
 
 ### 1. Flowchart: 🤷🏼‍♀️
-Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg).
+Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part2.jpg).
 ### 2. Prototipado de Baja Fidelidad: 📝
 Consiste en realizar un esquema de la página web, a groso modo, mediante una hoja de papel. 
 
@@ -166,7 +166,7 @@ Y, por último, se visualiza el cómo se acomodaría la página web en un dispos
 
 #### Expresiones regulares:
 
-> -   `(/\s/g, '') `  Para eliminamos espacios en blanco.
+> -   `(/\s/g, '') `  Para eliminar espacios en blanco.
 > -   `(/\D/g, '') `  Para eliminar las letras.
 > -   `(/([0-9]{4})/g, '$1 ') ` Para agrupar en 4 y agregar un espacio.
 > -   `(/([0-9]{4})/g, '$1 ') ` Para agrupar en 4 y agregar un espacio.
