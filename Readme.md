@@ -104,14 +104,21 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 ***
 
 ## Tecnologías empleadas 👩🏾‍💻 
-
+### Para la estructura y diseño:
 -   [HTML:](https://developer.mozilla.org/es/docs/Web/HTML)  Siguiendo las reglas del HTML semántico se estructuró con un  `header`  que contiene una barra de navegación, el  `main`  para englobar el contenido principal y en el  `footer`  se detalla los derechos de autor.
     
 -   [CSS:](https://developer.mozilla.org/es/docs/Web/CSS)  Usada para definir el estilo visual del proyecto.
+
+### Para el Testing:
 -   [Jest:](https://jestjs.io/docs/es-ES/getting-started)  Framework para realizar los testing unitarios.
     
 -   [Eslint:](https://jestjs.io/docs/es-ES/getting-started)  Herramienta de linting para analizar el código en busca de errores.
-    
+<div align="center">
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart1.jpg?raw=true" width="800">
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart2.jpg?raw=true" width="800">
+</div>
+
+### Para la funcionalidad:    
 -   [Javascript:](https://developer.mozilla.org/es/docs/Web/JavaScript)  Para dar la funcionalidad a la aplicación en donde se utilizó lo siguiente:
 
             📌 NOTA:¿Qué es una sentencia en JavaScript?
@@ -125,12 +132,12 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 
 #### Funciones creadas:
 
-> -   `mostrarAdelante()`  Para que la la imagen de la Tarjeta se de vuelta.
-> -   `function disabledBtn()`  Para deshabilitar el botón y que el usuario instroduzca los datos correctamente.
-> -   `isValid()`  Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
-> -   `maskify()`  Para ocultar los números de la tarjeta a excepción de los últimos 4 números.
+> - `mostrarAdelante()`  Para que la la imagen de la Tarjeta se de vuelta.
+> - `function disabledBtn()`  Para deshabilitar el botón y que el usuario instroduzca los datos correctamente.
+> - `isValid()`  Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
+> - `maskify()`  Para ocultar los números de la tarjeta a excepción de los últimos 4 números.
 
-#### Métodos:
+#### Métodos o Funciones Nativas:
 > - `AddEventListener() `Toma el evento y lo pone a escuchar, y un segundo argumento para llamar cada vez que se desencadena el evento descrito. Se utiliza para agregar un controlador de eventos a un elemento especificado. 
 > - `toggle() `Se usa en casos para ocultar y mostrar elementos de una página web.
 > - `createElement() `Se trata de pasarle el nombre de la etiqueta tag a utilizar.
@@ -145,7 +152,7 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
 > - `push() `Añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
 >-  `toString() `Comprueba su primer argumento, e intenta devolver una cadena de representación en la base especificada.
 >-  `join () `Se utiliza para convertir todos los elementos en la matriz en una cadena. Los elementos se designan por el delimitador separado.
->-  `.split `Sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los “trozos”. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
+>-  `split `Sirve para dividir una cadena en partes utilizando un carácter delimitador, devolviéndonos un array con los “trozos”. También admite un segundo parámetro opcional que indica cuántos elementos queremos que nos devuelva.
 >-  `concat() `Se usa para unir dos o más arrays. Este método no cambia los arrays existentes, sino que devuelve un nuevo array.
 >-  `parseInt() `Comprueba el primer argumento, una cadena, e intenta devolver un entero de la base especificada. Por ejemplo, una base de 10 indica una conversión a número decimal, 8 octal, 16 hexadecimal, y así sucesivamente.
 >- `replace() `Ejecuta una búsqueda por una coincidencia en una cadena y reemplaza la subcadena coincidente con una subcadena de reemplazo.

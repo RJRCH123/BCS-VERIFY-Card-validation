@@ -1,3 +1,4 @@
+import validator from './validator.js';
 
 //Declarar variables para la Tarjeta y Formulario
 const Tarjeta = document.querySelector('#Tarjeta'),
@@ -166,14 +167,12 @@ formularioBloquear.InputNombreB.addEventListener('keyup', (e) => {
 
 // PARA LA PAGINA VALIDAR
 
-import validator from './validator.js';
-
 let botonValidar = document.getElementById('Verificar')
 botonValidar.addEventListener('click', () => {
     let NumeroDeTarjeta = document.getElementById('InputNumero').value;
     //console.log('Me diste click: ' + NumeroDeTarjeta);
 
-    let resultValidator = validator.isvalid(NumeroDeTarjeta.replace(/\s/g, ''));
+    let resultValidator = validator.isValid(NumeroDeTarjeta.replace(/\s/g, ''));
     //console.log(resultValidator);
 
     // if (resultValidator === true) {
@@ -189,6 +188,8 @@ botonValidar.addEventListener('click', () => {
 
 });
 
+
+
 //console.log(validator);
 
 // PARA LA PAGINA BLOQUEAR
@@ -198,7 +199,7 @@ botonBloquear.addEventListener('click', () => {
     let NumeroDeTarjeta = document.getElementById('InputNumeroB').value;
     //console.log('Me diste click: ' + NumeroDeTarjeta);
 
-    let resultValidator = validator.isvalid(NumeroDeTarjeta.replace(/\s/g, ''));
+    let resultValidator = validator.isValid(NumeroDeTarjeta.replace(/\s/g, ''));
     //console.log(resultValidator);
 
     // if (resultValidator === true) {
@@ -216,3 +217,36 @@ botonBloquear.addEventListener('click', () => {
 
 //console.log(validator);
 
+
+
+// Alerta para el input número de Tarjeta de la pag. Verificar
+// let boton
+// function ContenidoInputTarjeta(){
+//   let Contenido = document.getElementById("InputNumero").legth;
+//   if(Contenido === 0 ){
+//   alert("El campo del número de Tarjeta es obligatorio.");
+//   return false;
+//   }
+//   if (Contenido.length < 13){
+//   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
+//   return false;
+//   }
+// }
+// // Alerta para el input número de Tarjeta de la pag. Bloquear
+// function ContenidoInputTarjetaB(){
+//   let ContenidoN = document.getElementById("InputNumero").value;
+//   let ContenidoF = document.getElementsByTagName("InputsB").value;
+//   if(ContenidoF === 0){
+//   alert("No procede, no ha completado el formulario.");
+//   return false;
+//  
+//   if ( 0 < ContenidoN.length < 13){
+//   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
+//   return false;
+//   }
+
+//   if ( ContenidoN.length === 0){
+//   alert("No procede, no ha completado el formulario.");
+//   return false;
+//   }
+// }

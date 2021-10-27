@@ -1,58 +1,35 @@
 /* eslint-disable no-console */
 const validator = {
-  isvalid: (NumeroDeTarjeta) => {
-    
-    let ObtNumTarjeta = NumeroDeTarjeta; // Obtenemos el número de la tarjeta
-    // eslint-disable-next-line no-console
-    console.log(ObtNumTarjeta);
+  isValid: (NumeroDeTarjeta) => {
+  // esperado string de números[1,2,3,4,....]
+    let arrayNumeroDeTarjeta = Array.from(NumeroDeTarjeta).map( i => Number(i) );
 
-    let stringNumeroDeTarjeta = ObtNumTarjeta.split(""); // Obtnemos el número en una cadena y en reversa
-    console.log(stringNumeroDeTarjeta);
+  //algoritmo de luhn
+    // array con elementos en orden invertido
+    arrayNumeroDeTarjeta = arrayNumeroDeTarjeta.reverse(); 
 
-    // eslint-disable-next-line no-unused-vars
-    let reverseNumeroDeTarjeta = stringNumeroDeTarjeta.reverse(); // Obtenemos el número en reversa
-    console.log(reverseNumeroDeTarjeta);
+    let sum = 0;
 
-    let parNumero = [];
-    let doubleNumero = [];
-    let finalNumero = [];
-
-    let sumNumero = 0;
-
-    if ((ObtNumTarjeta.length === 18) || (ObtNumTarjeta.length === 16) || (ObtNumTarjeta.length === 14)) {
-      for (let i = stringNumeroDeTarjeta.length-1; i >= 0; i--) {
-        if (i % 2 !== 0) {
-          parNumero.push(stringNumeroDeTarjeta[i]);
-        }else {
-          doubleNumero.push((stringNumeroDeTarjeta[i] *2).toString());
+    for(let i = 0; i < arrayNumeroDeTarjeta.length; i++){
+      
+      if(i%2 === 1){
+        
+        //posición par
+        if((arrayNumeroDeTarjeta[i] * 2) >= 10){
+          arrayNumeroDeTarjeta[i] = arrayNumeroDeTarjeta[i] * 2-9;
+        }else{
+          arrayNumeroDeTarjeta[i] = arrayNumeroDeTarjeta[i] * 2;
         }
+      } else{  
+        //posición impar
+        arrayNumeroDeTarjeta[i];
       }
-    } else if ((ObtNumTarjeta.length <= 19) || (ObtNumTarjeta.length === 17) (ObtNumTarjeta.length === 15) || (ObtNumTarjeta.length === 13)) {
-      for (let i = stringNumeroDeTarjeta.length-1; i >= 0; i--) {
-        if (i % 2 === 0) {
-          parNumero.push(stringNumeroDeTarjeta[i]);
-        }else {
-          doubleNumero.push((stringNumeroDeTarjeta[i]*2).toString());
-        }
-      }
+      //Suma de dígitos hallados
+      sum = sum + arrayNumeroDeTarjeta[i];
     }
 
-    doubleNumero = doubleNumero.join("").split("");
-    finalNumero = doubleNumero.concat(parNumero);
-
-    for (let index = 0; index < finalNumero.length; index++) {
-      sumNumero += parseInt(finalNumero[index], 10);
-    }
-
-    console.log(sumNumero);
-
-    if (sumNumero % 10 === 0) {
-      return true;
-    }else{
-      return false;
-    }
-
-    
+    //Si la suma es multiplo de 10 es True
+    return sum % 10 === 0;
   },
 
   maskify: (NumeroDeTarjeta) => {
