@@ -39,7 +39,7 @@ const validator = {
     for (let i = 0; i < NumeroDeTarjeta.length; i++) {
 
       if (i <= NumeroDeTarjeta.length -5) {
-        mask += "#";
+        mask += "•";
       }else{
         mask += NumeroDeTarjeta[i];
       }

@@ -473,6 +473,11 @@ button.verificar {
   text-transform: uppercase;
 }
 
+.formularioBloquear img {
+  width: 8%;
+  margin-left: 400px;
+}
+
 .formularioBloquear .bloquear {
   border: none;
   padding: 12px;

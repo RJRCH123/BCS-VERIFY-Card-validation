@@ -67,7 +67,7 @@
 
               <div class="grupo" id="Numero">
                 <p class="label">Número Trajeta</p>
-                <p class="numero" id="numero" >#### #### #### ####</p>
+                <p class="numero" id="numero" > ●●●● ●●●● ●●●● ●●●●</p>
               </div>
 
               <div class="flexbox">
@@ -117,12 +117,12 @@
 
           <div class="grupo">
             <label for="InputNumero">Número de Tarjeta</label>
-            <input type="text"  class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off">
+            <input type="password"  class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off" required>
           </div>
 
           <div class="grupo">
             <label for="InputNombre">Nombre y Apellido</label>
-            <input type="text" id="InputNombre" maxlength="40" autocomplete="off">
+            <input type="text" id="InputNombre" maxlength="40" autocomplete="off" required>
           </div>
 
           <div class="flexbox">
@@ -145,7 +145,7 @@
             <!-- CVV -->
             <div class="grupoCCV">
               <label for="InputCCV">CCV</label>
-              <input type="text" id="InputCCV" maxlength="3">
+              <input type="password" id="InputCCV" maxlength="3" required>
             </div>
           </div>
           <!-- Botón Verificar Validación -->
@@ -169,17 +169,20 @@
         <form action="" class="formularioBloquear" id="FormularioBloquear">
           <div class="grupo">
             <label for="InputNumero">Número de Tarjeta</label>
-            <input type="text" name="InputsB" class="InputNumero" id="InputNumeroB" maxlength="19" autocomplete="off">
+            <input type="password" name="InputsB" class="InputNumero" id="InputNumeroB" maxlength="19" autocomplete="off" required>
+          </div>
+          <div>
+            <img onclick="mostrarNumero()"src="./img/signos/ojo.png" alt="Mostrar">
           </div>
 
           <div class="grupo">
             <label for="InputNombre">Nombre y Apellido</label>
-            <input type="text" name="InputsB" id="InputNombreB" maxlength="40" autocomplete="off">
+            <input type="text" name="InputsB" id="InputNombreB" maxlength="40" autocomplete="off" required>
           </div>
 
           <div class="grupo">
             <label for="InputCorreo">Correo Electrónico</label>
-            <input type="text" name="InputsB" id="InputCorreo" maxlength="30" autocomplete="off">
+            <input type="text" name="InputsB" id="InputCorreo" maxlength="30" autocomplete="off" required>
           </div>
           <button type="submit"  id="Bloquear" class="bloquear" onclick="ContenidoInputTarjetaB()">Bloquear</button>
         </form>
@@ -190,9 +193,6 @@
     <section id="Contactanos" class="Box">
       <img class="GifNav" src="./img/Videos/Contacta.gif" alt="BCS Verify®"> 
       <img  class="GifContacPag" src="./img/Videos/GifdetodoContactos.gif" alt="Contáctanos | BCS Verify®">
-      <!--<img class="GifContactanos" src="./img/Videos/Telefono.gif" alt="BCS Verify®">
-      <img class="GifContactanos" src="./img/Videos/Wssp.gif" alt="BCS Verify®">
-      <img class="GifContactanos" src="./img/Videos/RedesSociales.gif" alt="BCS Verify®"> <br><br><hr> -->
     </section>
   </main>
     <!-- Barra inferior  -->     
@@ -223,6 +223,16 @@
       
       // Obtenga el elemento con id = "AbrirPorDefecto" y haga clic en él
       document.getElementById("AbrirPorDefecto").click();
+
+      // Mostrar el número para el input numero de la página para Bloquear
+      function mostrarNumero(){
+        var tipo = document.getElementById ("InputNumeroB");
+        if(tipo.type == "InputNumeroB"){
+          tipo.type = "text";
+        } else{
+          tipo.type = "InputNumeroB"
+        }
+      }
 
     </script>
     <script src="index.js" type="module"></script>

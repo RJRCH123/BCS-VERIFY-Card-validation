@@ -64,7 +64,7 @@ formulario.InputNumero.addEventListener('keyup', (e) => {
   numeroTarjeta.textContent = valorInput;
 
 	if(valorInput == ''){
-		numeroTarjeta.textContent = '#### #### #### ####';
+		numeroTarjeta.textContent = '●●●● ●●●● ●●●● ●●●●';
 
 		TipoMarca.innerHTML = '';
 	}
@@ -153,7 +153,7 @@ formularioBloquear.InputNumeroB.addEventListener('keyup', (e) => {
   .replace(/\s/g, '') // Eliminamos espacios en blanco
   .replace(/\D/g, '') // Eliminar las letras
   .replace(/([0-9]{4})/g, '$1 ') // Ponemos espacio cada cuatro numeros
-  .trim(); // Elimina el ultimo espaciado
+  .trim() // Elimina el ultimo espaciado
 });
 
 // Input nombre de Tarjeta
@@ -188,7 +188,7 @@ botonValidar.addEventListener('click', () => {
 
 });
 
-
+  
 
 //console.log(validator);
 
@@ -217,36 +217,3 @@ botonBloquear.addEventListener('click', () => {
 
 //console.log(validator);
 
-
-
-// Alerta para el input número de Tarjeta de la pag. Verificar
-// let boton
-// function ContenidoInputTarjeta(){
-//   let Contenido = document.getElementById("InputNumero").legth;
-//   if(Contenido === 0 ){
-//   alert("El campo del número de Tarjeta es obligatorio.");
-//   return false;
-//   }
-//   if (Contenido.length < 13){
-//   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
-//   return false;
-//   }
-// }
-// // Alerta para el input número de Tarjeta de la pag. Bloquear
-// function ContenidoInputTarjetaB(){
-//   let ContenidoN = document.getElementById("InputNumero").value;
-//   let ContenidoF = document.getElementsByTagName("InputsB").value;
-//   if(ContenidoF === 0){
-//   alert("No procede, no ha completado el formulario.");
-//   return false;
-//  
-//   if ( 0 < ContenidoN.length < 13){
-//   alert("El número de Tarjeta debe ser mayor a 13 dígitos.");
-//   return false;
-//   }
-
-//   if ( ContenidoN.length === 0){
-//   alert("No procede, no ha completado el formulario.");
-//   return false;
-//   }
-// }
