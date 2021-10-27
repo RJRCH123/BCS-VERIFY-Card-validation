@@ -58,15 +58,15 @@ BCS Verify®, mediante su página web nos brinda lo siguiente:
 
 ## Diseño 📱
 Para la realización del diseño, pasamos por las siguientes fases: 
-### 1. Prototipado de Baja Fidelidad: 📝
+
+### 1. Flowchart: 🤷🏼‍♀️
+Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg).
+### 2. Prototipado de Baja Fidelidad: 📝
 Consiste en realizar un esquema de la página web, a groso modo, mediante una hoja de papel. 
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Prototipo%20Baja%20Fidelidad/PrototipoBF.png" width="800">
 </div>
-
-### 2. Flowchart: 🤷🏼‍♀️
-Al definir qué páginas contendrá la plataforma Web, se realizó un  [mapa semántico](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg)  y un [diagrama de flujo](https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Flowchart/Flowcharts-Part1.jpg).
 
 ### 3. Wireframe: 🙋🏼
 Por consiguiente, en esta fase se busca realizar un esquema de distribución a groso modo de cada página que contiene la plataforma. 
