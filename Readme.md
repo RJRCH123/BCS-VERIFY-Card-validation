@@ -95,7 +95,7 @@ A continuación, se mostrará parte del Prototipado de Alta Fidelidad, si desea 
 </div>
 
 ### 5. Mockup: 🧑🏾‍💻
-Y, por último, se visualiza el cómo se vería la página web en un dispositivo.
+Y, por último, se visualiza el cómo se acomodaría la página web en un dispositivo.
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/Mockups/Mockup.png" width="800">
@@ -114,8 +114,8 @@ Y, por último, se visualiza el cómo se vería la página web en un dispositivo
     
 -   [Eslint:](https://jestjs.io/docs/es-ES/getting-started)  Herramienta de linting para analizar el código en busca de errores.
 <div align="center">
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart1.jpg?raw=true" width="800">
-<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart2.jpg?raw=true" width="800">
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart1.jpg?raw=true" width="500">
+<img src="https://github.com/RJRCH123/LIM016-card-validation/blob/main/src/img%20Readme/Testing/Testpart2.jpg?raw=true" width="500">
 </div>
 
 ### Para la funcionalidad:    
