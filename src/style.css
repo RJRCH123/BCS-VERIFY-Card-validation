@@ -398,10 +398,6 @@ body, html {
   min-width: 100px;
 }
 
-.formulario select {
-  -webkit-appearance:auto;
-}
-
 
 .formulario .verificar {
   border: none;
