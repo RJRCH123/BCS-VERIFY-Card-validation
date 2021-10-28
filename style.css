@@ -1,0 +1,525 @@
+
+/* Importación de estilos a letras */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Establezca la altura del cuerpo y del documento al 100% para habilitar las "pestañas de página completa". */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+        /* BARRA DE NAVEGACIÓN */
+
+.BoxNavs {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  font-family: Roboto;
+}
+
+.BoxNavs:hover { /* Lo que cambiará cuando pase el cursor*/
+  background-color: #777;
+  font-family: Roboto;
+}
+
+.GifNav {
+  width: 100%;
+}
+
+/* LOGOS */
+.LogoGifContac {
+  width: 200px;
+}
+.LogoRecBlanco {
+  width: 200px;
+}
+
+        /* BARRA DE SCROLL */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(10 40 65);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #545555ba;
+  border-radius: 50px;
+}
+
+        /* PÁGINAS */
+
+/* Diseñe el contenido de la pestaña (y agregue altura: 100% para el contenido de la página completa) */
+.Box {
+  display: none;
+  padding: 0;
+  height: 100%;
+  font-family:'Poppins', sans-serif;
+}
+
+#Inicio {background-color: rgb(255, 255, 255);}
+#ValidarTarjeta {background-color: rgb(255, 255, 255);}
+#BloquearTarjeta {background-color: rgb(255, 255, 255);}
+#Contactanos {background-color: rgb(255, 255, 255);}
+
+        /* MAIN: INICIO */
+
+.BoxIntro {
+  font-size: 14px;
+  padding: 0px 20px;
+}
+.BoxIntro p{
+  color: black;
+  font-size: 12px;
+}
+
+.BoxIntro h2 {
+  color: rgb(10 40 65);
+  font-size: 14px;
+}
+
+.BoxInfo {
+  margin: 0 auto;
+  width: 1000px;
+  height: 300px;
+  padding: 20px 5px;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-gap: 50px;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+}
+
+.Info h2 {
+  color: rgb(10 40 65);
+  font-size: 14px;
+}
+
+.Info h3 {
+  color: #555;
+  font-size: 14px;
+}
+
+.Info p {
+  color: black;
+  font-size: 12px;
+}
+
+.Info img {
+  width: 24%;
+}
+
+        /* MAIN: VALIDAR TARJETA */
+
+/* PAGINA TOTAL DE VALIDAR TARJETA */
+
+.ValidarTarjeta{
+  height: 100%;
+  background: white;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CONTENEDOR TARJETA + FORMULARIO + BOTON ABRIR */
+.BoxValidarTarjeta{
+  width: 80%;
+  max-width: 1000px; /* Asegura que el contenedor no sea demasiado grande*/
+  padding: 30px 10px;
+  margin-left: 150px;
+  display: flex; 
+  /* flex-direction: column; */
+  justify-content: space-between; 
+  /* align-items: center;  */
+  /* se podria usar justify-content: center, pero no podemos porque usamos flex-direction; y usamos align para centrarlo de forma horizontal */
+  
+}
+
+/*LA TARJETA*/
+
+.Tarjeta {
+  width: 100%; 
+  max-width: 500px; /* Para que no sea demasiado grande y estaria al mismo nivel que el box normal*/
+  position:relative; /* Al elemento padre le ponemos position relative y luego al elemento hijo le ponemos position absolute para que no aparezca debajo*/
+  color: white;
+  transition: .4s ease all; /* tiempo y función*/
+  transform: rotateY(0deg); /* para valor a la rotación y le ponemos 0 grados para que se quede fija en el eje */
+  transform-style: preserve-3d; /*3d para agregarle el efecto de giro 3d */
+  backface-visibility: hidden; /* nos permite que la parte de atras de la tarjeta este oculta cuando se gire*/
+  cursor: pointer;/* para que suceda cuando se pase el cursero*/
+  z-index: 2; /* nos permite establecer qué capa se muestre. 1:formulario  2:tarjeta 3:botón*/
+  
+}
+
+/* .Tarjeta:hover {
+  transform: rotateY(180deg); 
+} Para que cuando pase el cursor gire 180 grados pero para que gire cuando demos clic se debe agregar una funcion */
+
+.Tarjeta.active { /* Al dar clic girara 180 grados por la funcion active*/
+  transform: rotateY(180deg);
+} 
+
+.Tarjeta > div {
+  padding: 30px;
+  border-radius: 15px;
+  /* min-height: 315px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 10px rgba(90, 116, 148, 0.3);
+}
+
+/* TARJETA: DELANTERA */
+.Tarjeta .Delantera{
+  width: 100%;
+  background: url(./img/Tarjeta/Fondo.jpg);
+  box-shadow: 10px 13px 12px 2px #333333ba;
+  background-size: cover; /* Para que la imagen se adapte y no se corte*/
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.Delantera .Tipo-Marca {
+  text-align: right;
+  min-height: 50px;
+}
+
+.Delantera .Tipo-Marca img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+}
+
+.Delantera .Chip {
+  width: 100%;
+  max-width: 50px;
+}
+
+.Delantera .grupo .label {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.Delantera .grupo .numero,
+.Delantera .grupo .nombre,
+.Delantera .grupo .expiracion {
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase; /*Asegura que esten en mayusculas*/
+}
+
+.Delantera .flexbox {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* TARJETA: REVERSA */
+
+.Tarjeta .Reversa {
+  width: 100%;
+  background: url(./img/Tarjeta/Fondo.jpg);
+  box-shadow: 10px 13px 12px 2px #333333ba;
+  background-size: cover;
+  position: absolute; /* mas el top de 0 se podrá esconder bajo la tarjeta delantera*/
+  top: 0;
+  transform: rotateY(180deg); /* Para que aparezca modo espejo*/
+  backface-visibility: hidden; /* Ocultar la parte de atrás*/
+}
+
+.Reversa .Barra {
+  height: 40px;
+  background: black;
+  width: 100%;
+  position: absolute; 
+  top: 30px;
+  left: 0;
+}
+
+.Reversa .Datos {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Reversa .Datos p {
+  margin-bottom: 5px;
+}
+
+.Reversa .grupo .label {
+  font-size: 12px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.Reversa .Datos #Firma {
+  width: 70%;
+}
+
+.Reversa .Datos #Firma .firma {
+  height: 30px;
+  background: repeating-linear-gradient(skyblue 0px, skyblue 4px, orange 4px, orange 8px );
+  
+}
+
+.Reversa .Datos #Firma .firma p {
+  line-height: 30px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+  color: black;
+  font-size: 20px;
+  padding: 0 10px;
+  text-transform: capitalize; /* primera letra en mayúscula */
+}
+
+.Reversa .Datos #CCV {
+  width: 20%;
+}
+
+.Reversa .Datos #CCV .ccv {
+  background: white;
+  height: 24px;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+
+.Reversa .leyenda {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+/* BOTÓN ABRIR FORMULARIO*/
+
+.BoxBoton .abrirFormulario {
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  line-height: 20px;
+  background: gray;
+  color: white;
+  position: relative;
+  left: 100px;
+  /* top: 130px; */
+  z-index: 3;
+  border-radius: 100%;
+  box-shadow: -5px 4px 8px rgb(10 40 65);
+  padding: 5px;
+  transition: all .3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.BoxBoton .abrirFormulario:hover {
+  background-color: rgb(59, 59, 59);
+}
+
+.BoxBoton .abrirFormulario.active {
+  transform: rotate(45deg)
+} 
+
+/* FORMULARIO DE LA TARJETA*/
+.formulario {
+  background: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 700px;
+  padding: 0px 30px 0px 120px;
+  border-radius: 15px;
+  position: relative;
+  left: 20px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path .4s ease-out;
+}
+
+.formulario.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario label {
+  display: block;
+  color: rgb(95, 95, 95);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario select,
+.verificar {
+  border: 2px solid rgb(168, 223, 245);
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  padding: 5px 8px;
+  transition: .2s ease all;
+  border-radius: 8px;
+}
+
+.formulario input:hover,
+.formulario select:hover {
+  border: 3px solid rgba(90, 116, 148, 0.3);
+}
+
+.formulario input:focus,
+.formulario select:focus {
+  outline: black;
+  box-shadow: 2px 8px 12px -6px rgba(89, 142, 206, 0.3);
+}
+
+.formulario input {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.formulario .flexbox {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 15px;
+}
+
+.formulario .grupoExpira {
+  width: 100%;
+}
+
+.formulario .grupoCCV {
+  min-width: 100px;
+}
+
+.formulario select {
+  -webkit-appearance: none
+}
+
+
+.formulario .verificar {
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  color: white;
+  background: rgb(10 40 65) ;
+  box-shadow: 2px 2px 10px 0px rgba(90, 116, 148, 0.3);
+  cursor: pointer;
+}
+
+.formulario .verificar:hover {
+  background: rgb(59, 59, 59);
+}
+
+button.verificar {
+  width: 174px;
+  height: 39px;
+}
+
+        /* MAIN: BLOQUEAR TARJETA */
+
+.boxFormularioBloquear {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.boxFormularioBloquear img {
+  width: 60%;
+  margin-left: 150px;
+}
+
+.formularioBloquear {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 200px 50px 50px ;
+}
+
+.formularioBloquear label{
+  color: rgb(95, 95, 95);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.formularioBloquear input,
+.formularioBloquear select,
+.bloquear {
+  border: 2px solid rgb(168, 223, 245);
+  font-size: 14px;
+  height: 30px;
+  width: 100%;
+  padding: 5px 8px;
+  border-radius: 8px;
+}
+
+.formularioBloquear input:hover,
+.formularioBloquear select:hover {
+  border: 3px solid rgba(90, 116, 148, 0.3);
+}
+
+.formularioBloquear input:focus,
+.formularioBloquear select:focus {
+  outline: black;
+  box-shadow: 2px 8px 12px -6px rgba(89, 142, 206, 0.3);
+}
+
+.formularioBloquear input {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.formularioBloquear img {
+  width: 8%;
+  margin-left: 400px;
+}
+
+.formularioBloquear .bloquear {
+  border: none;
+  padding: 12px;
+  font-size: 12px;
+  color: white;
+  background: rgb(10 40 65) ;
+  box-shadow: 2px 2px 10px 0px rgba(90, 116, 148, 0.3);
+  cursor: pointer;
+}
+
+.formularioBloquear .bloquear:hover {
+  background: rgb(59, 59, 59);
+}
+
+button.bloquear {
+  width: 174px;
+  height: 39px;
+}
+
+        /* MAIN: CONTACTANOS */
+
+.GifContacPag{
+  width: 100%;
+  height: 100%;
+}
+
+        /* PIE DE PAGINA */
+.footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: xx-small;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Roboto;
+}
+
+/* Iconos de las redes sociales*/
+.redSocial{
+  width: 1.125rem;
+}

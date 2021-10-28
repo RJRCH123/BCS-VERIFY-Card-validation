@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BCS Verify®</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon --> 
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon/favicon.ico">
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <header>
+      <button class="BoxNavs" onclick="openPage('Inicio', this,'rgb(10 40 65)')" id="AbrirPorDefecto">SOBRE NOSOTROS</button>
+      <button class="BoxNavs" onclick="openPage('ValidarTarjeta', this,'rgb(10 40 65)')" >VALIDAR TARJETA</button>
+      <button class="BoxNavs" onclick="openPage('BloquearTarjeta', this,'rgb(10 40 65)')">BLOQUEAR TARJETA</button>
+      <button class="BoxNavs" onclick="openPage('Contactanos', this, 'rgb(48 129 129)')">CONTÁCTANOS</button>
+    </header> 
+
+    <!-- Página de la información sobre la compañía -->
+    <main>
+    <section id="Inicio" class="Box">
+      <img class="GifNav" src="./img/Videos/Bienvenidos.gif" alt="BCS Verify®">
+      <div class="BoxIntro">
+        <h2>Bienvenidos a BCS Verify®</h2>
+        <p>Esta compañía se enfoca en ayudar a los usuarios con cualquier tipo de tarjeta de crédito para evitar cualquier tipo de estafas. <strong>En esta página podrá bloquear y validar tu tarjeta desde cualquier ordenador o dispositivo móvil.</strong> Además, podrás contar con una línea totalmente gratuita para poder solicitar ayuda las 24 horas diarias.</p><hr><br>
+      </div>
+      <div class="BoxInfo">
+        <div class="Info">
+          <h2>NUESTROS AFILIADOS</h2>
+          <h3>¿Quiénes trabajan con BCS Verify®?</h3>
+          <p> Trabajamos con las siguientes redes globales de tecnología que garantizan que puedas usar tu tarjeta de crédito o de débito en otros países:</p>
+          <img src="./img/Tarjeta/Diners-Club.png" alt="DinersClub">
+          <img src="./img/Tarjeta/MasterCard.png" alt="MasterCard">
+          <img src="./img/Tarjeta/AmericanEx.png" alt="AmericanEx">
+          <img src="./img/Tarjeta/VisaColor.png" alt="Visa">
+          
+          
+        </div>
+        <div class="Info">
+          <h2>NUESTRA SEGURIDAD</h2>
+          <h3>¿Existe riesgo al usar BCS Verify®?</h3>
+          <p>Bank Card Security Verify® le brinda total confidencialidad en cualquier ordenador. Contamos con un sistema de seguridad de alta gama y tenemos el respaldo de nuestros afiliados. La base de datos no archivará su información personal. Tenga la seguridad que sus información no se expondrán a manos equívocas. <br><br>
+          Sin embargo, al usar BCS Verify® deberá tener precaución y hacerlo de forma privada, sin personas desconocidas alrededor, para así evitar que alguien pueda observar sus información.</p> 
+        </div>
+      </div>
+    </section>
+    <!-- Página para la Validación de Tarjeta -->  
+    <section id="ValidarTarjeta" class="Box">
+      <img class="GifNav" src="./img/Videos/Valida.gif" alt="BCS Verify®">
+      <div class="BoxIntro">
+        <h2>¿Cómo validar su tarjeta?</h2>
+        <p>A continuación llene los datos correspondientes para confirmar si su tarjeta está vigente aún. Si aparece como inválida, significa que ya está bloqueada.<strong> PRECAUCIÓN:</strong> Debido a tener los datos expuestos en pantalla podrá esconderla, tantas veces sea necesaria, solamente deberá dar click al botón circular.</p><hr>
+      </div><br><br>
+
+      <div class="BoxValidarTarjeta">
+        <!-- Tarjeta -->
+        <section class="Tarjeta" id="Tarjeta">
+
+          <!-- Parte delantera de la Tarjeta -->
+          <div class="Delantera">
+            <!-- Logo del banco -->
+            <div class="Tipo-Marca" id="Tipo-Marca"></div>
+            <!-- Imagen del chip -->
+            <img src="./img/Tarjeta/chip-tarjeta.png" class="Chip" alt="Chip">
+            <!-- Contenedor de los Datos -->
+            <div class="Datos">
+
+              <div class="grupo" id="Numero">
+                <p class="label">Número Trajeta</p>
+                <p class="numero" id="numero" > ●●●● ●●●● ●●●● ●●●●</p>
+              </div>
+
+              <div class="flexbox">
+
+                <div class="grupo" id="Nombre">
+                  <p class="label">Nombre y Apellido</p>
+                  <p class="nombre" id="nombre">Mario Diaz</p>
+                </div>
+
+                <div class="grupo" id="Expiracion">
+                  <p class="label">Expiración</p>
+                  <p class="expiracion"><span class="mes">MM</span> / <span class="anio">AA</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parte delantera de la Tarjeta -->
+          <div class="Reversa">
+            <!-- Barra Magnética -->
+            <div class="Barra"></div>
+            <!-- Contenedor de los Datos -->
+            <div class="Datos">
+              <div class="grupo" id="Firma">
+                <p class="label">Firma</p>
+                <div class="firma" id="firma"><p>Mario Diaz</p></div>
+              </div>
+              <div class="grupo" id="CCV">
+                <p class="label">CCV</p>
+                <em><p class="ccv" id="ccv"></p></em>
+              </div>
+            </div>
+            <!-- Contenedor de la Leyenda -->
+            <p class="leyenda"> Los datos a rellenar son confidenciales, además, estarán encriptados. La base de datos no archivará su información personal. Tenga la seguridad que sus datos no se expondrán a manos equívocas.</p>
+          </div>
+        </section> 
+
+        <!-- Botón para abrir y cerrar el Formulario -->
+        <div class="BoxBoton">
+          <button class="abrirFormulario" id="AbrirFormulario">
+          +
+          </button>
+        </div>
+        
+        <!-- Formulario -->
+        <form action="" id="Formulario" class="formulario">
+
+          <div class="grupo">
+            <label for="InputNumero">Número de Tarjeta</label>
+            <input type="password"  class="InputNumero" id="InputNumero" maxlength="19" autocomplete="off" required>
+          </div>
+
+          <div class="grupo">
+            <label for="InputNombre">Nombre y Apellido</label>
+            <input type="text" id="InputNombre" maxlength="40" autocomplete="off" required>
+          </div>
+
+          <div class="flexbox">
+            <div class="grupoExpira">
+              <label for="labelExpira">Expiración</label>
+              <div class="flexbox">
+                <!-- Grupo Input Expiración -->
+                <div class="grupoSeleccionable">
+                  <select name="Mes" id="SeleccionarMes">
+                    <option disabled selected>Mes</option>
+                  </select>
+                </div>
+                <div class="grupoSeleccionable">
+                  <select name="Anio" id="SeleccionarAnio">
+                    <option disabled selected>Año</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- CVV -->
+            <div class="grupoCCV">
+              <label for="InputCCV">CCV</label>
+              <input type="password" id="InputCCV" maxlength="3" required>
+            </div>
+          </div>
+          <!-- Botón Verificar Validación -->
+          <button type="submit"  id="Verificar" class="verificar" onclick="ContenidoInputTarjetaB()" >Verificar</button>
+
+        </form>
+      </div><br><br>  
+
+    </section>
+      <!-- Página para el Bloqueo de Tarjeta --> 
+    <section id="BloquearTarjeta" class="Box">
+      <img class="GifNav" src="./img/Videos/Bloquea.gif" alt="BCS Verify®">
+      <div class="BoxIntro">  
+        <h2>¿Cómo bloquear su tarjeta?</h2>
+        <p>Si tiene problemas con su tarjeta o ha sufrido cualquier tipo de robo u estafa, podrá proceder a bloquearla llenando tus datos y dando click en "Bloquear". Al terminar, le llegará a su correo la confirmación del bloqueo de Tarjeta donde deverá dar nuevamente click para confirmar su identidad y finiquitar el bloqueo.</p><hr><br>
+      </div>
+      <div class="boxFormularioBloquear" id="BoxFormularioBloquear" >
+        <img src="./img/Decorativas/Usuarios Bloqueando Tarjeta.jpg" alt="BCS Verify®">
+        <form action="" class="formularioBloquear" id="FormularioBloquear">
+          <div class="grupo">
+            <label for="InputNumero">Número de Tarjeta</label>
+            <input type="password" name="InputsB" class="InputNumero" id="InputNumeroB" maxlength="19" autocomplete="off" required>
+          </div>
+          <div> 
+            <img onclick="mostrarNumero()"src="./img/signos/ojo.png" alt="Mostrar">
+          </div>
+
+          <div class="grupo">
+            <label for="InputNombre">Nombre y Apellido</label>
+            <input type="text" name="InputsB" id="InputNombreB" maxlength="40" autocomplete="off" required>
+          </div>
+
+          <div class="grupo">
+            <label for="InputCorreo">Correo Electrónico</label>
+            <input type="text" name="InputsB" id="InputCorreo" maxlength="30" autocomplete="off" required>
+          </div>
+          <button type="submit"  id="Bloquear" class="bloquear" onclick="ContenidoInputTarjetaB()">Bloquear</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Página para la información de Contacto --> 
+    <section id="Contactanos" class="Box">
+      <img class="GifNav" src="./img/Videos/Contacta.gif" alt="BCS Verify®"> 
+      <img  class="GifContacPag" src="./img/Videos/GifdetodoContactos.gif" alt="Contáctanos | BCS Verify®">
+    </section>
+  </main>
+    <!-- Barra inferior  -->     
+    <footer class="footer">
+      El contenido de esta página web es con fines educativos personales. La idea del proyecto "CCS Verify®" no existe. <br> Lima - Perú | 2021 <br> 
+
+      <a href="https://github.com/RJRCH123"><img src="./img/Redes sociales/icons8-github-30.png" href="https://github.com/RJRCH123" class="redSocial" alt="Mi Github"></a> 
+      <a href="mailto:rous9716@gmail.com"><img src="./img/Redes sociales/icons8-gmail-32.png" class="redSocial" alt="Mi Gmail"></a> 
+      <a href="https://twitter.com/rouseblues"><img src="./img/Redes sociales/icons8-twitter-30.png" class="redSocial" alt="Mi Twitter"></a> 
+      <a href="https://www.linkedin.com/in/rosamaria-rodriguez-6904a1191/"><img src="./img/Redes sociales/icons8-linkedin-30.png" class="redSocial" alt="Mi LinkenIn"></a> 
+
+    </footer>
+    <!-- Función para la sincronización de páginas con la Barra de Navegación --> 
+    <script>
+      function openPage(pageName,elmnt,color) {
+        var i, Box, BoxNavs;
+        Box = document.getElementsByClassName("Box");
+        for (i = 0; i < Box.length; i++) {
+          Box[i].style.display = "none";
+        }
+        BoxNavs = document.getElementsByClassName("BoxNavs");
+        for (i = 0; i < BoxNavs.length; i++) {
+          BoxNavs[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+      
+      // Obtenga el elemento con id = "AbrirPorDefecto" y haga clic en él
+      document.getElementById("AbrirPorDefecto").click();
+
+      // Mostrar el número para el input numero de la página para Bloquear
+      function mostrarNumero(){
+        var tipo = document.getElementById ("InputNumeroB");
+        if(tipo.type == "InputNumeroB"){
+          tipo.type = "text";
+        } else{
+          tipo.type = "InputNumeroB"
+        }
+      }
+
+    </script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
