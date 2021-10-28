@@ -399,7 +399,7 @@ body, html {
 }
 
 .formulario select {
-  -webkit-appearance: none
+  -webkit-appearance:auto;
 }
 
 
