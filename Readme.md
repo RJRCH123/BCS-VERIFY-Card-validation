@@ -103,11 +103,6 @@ Y, por último, se visualiza el cómo se acomodaría la página web en un dispos
 
 ***
 
-## Prototipo Final:
-A continuación se mostrará una videodemostración del prototipo final.
-<div align="center">
-<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/VideoPrototipoFinal.gif" width="800">
-</div>
 
 ## Tecnologías empleadas 👩🏾‍💻 
 ### Para la estructura y diseño:
