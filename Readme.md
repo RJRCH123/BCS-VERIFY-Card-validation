@@ -103,6 +103,12 @@ Y, por último, se visualiza el cómo se acomodaría la página web en un dispos
 
 ***
 
+## Prototipo Final:
+A continuación se mostrará una videodemostración del prototipo final.
+<div align="center">
+<img src="https://raw.githubusercontent.com/RJRCH123/LIM016-card-validation/main/src/img%20Readme/VideoPrototipoFinal.gif" width="800">
+</div>
+
 ## Tecnologías empleadas 👩🏾‍💻 
 ### Para la estructura y diseño:
 -   [HTML:](https://developer.mozilla.org/es/docs/Web/HTML)  Siguiendo las reglas del HTML semántico se estructuró con un  `header`  que contiene una barra de navegación, el  `main`  para englobar el contenido principal y en el  `footer`  se detalla los derechos de autor.
@@ -133,7 +139,6 @@ Y, por último, se visualiza el cómo se acomodaría la página web en un dispos
 #### Funciones creadas:
 
 > - `mostrarAdelante()`  Para que la la imagen de la Tarjeta se de vuelta.
-> - `function disabledBtn()`  Para deshabilitar el botón y que el usuario instroduzca los datos correctamente.
 > - `isValid()`  Para aplicar el algoritmo luhn en el número de tarjeta introducido por el usuario.
 > - `maskify()`  Para ocultar los números de la tarjeta a excepción de los últimos 4 números.
 
