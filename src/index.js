@@ -163,6 +163,7 @@ formularioBloquear.InputNombreB.addEventListener('keyup', (e) => {
 	formularioBloquear.InputNombreB.value = valorInput.replace(/[0-9]/g, '');
 });
 
+
         // IMPORTACIÓN DEL CÓDIGO ISVALID Y MASKIFY 
 
 // PARA LA PAGINA VALIDAR
@@ -211,7 +212,7 @@ botonBloquear.addEventListener('click', () => {
     let maskNumero = validator.maskify(NumeroDeTarjeta.replace(/\s/g, ''));
     //console.log(maskNumero);
 
-    resultValidator === true?alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad para bloquear fue enviada. Revise su correo.'):alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'La Confirmación de Identidad para bloquear no fue enviada'); 
+    resultValidator === true?alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '✔️ ES VÁLIDA' + ' \n  \n ' + 'La confirmación de identidad para bloquear la tarjeta fue enviada.' + ' \n  \n ' + 'Por favor, Revise su correo.'+ ' \n ' + 'NOTA: De no haberle llegado al correo, verificar que esté bien escrito.'):alert('El número de Tarjeta:' + ' \n ' + maskNumero + ' \n  \n ' + '❌ NO ES VÁLIDA' + ' \n  \n ' + 'La confirmación de identidad para bloquear la tarjeta no fue enviada' + ' \n  \n ' + 'NOTA: De no haberle llegado al correo, verificar que esté bien escrito.'); 
 
 });
 
