@@ -1,3 +1,4 @@
+![](https://komarev.com/ghpvc/?username=Verify&color=yellow)
 
 ## ÍNDICE
 
